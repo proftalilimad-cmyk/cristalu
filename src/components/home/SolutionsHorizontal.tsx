@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import Media from '../ui/Media'
 import SectionHeading from '../ui/SectionHeading'
 import { MagneticLink } from '../ui/MagneticButton'
@@ -10,7 +10,7 @@ import { gsap, prefersReducedMotion } from '../../lib/animation'
 import { useMediaQuery } from '../../lib/hooks'
 
 export default function SolutionsHorizontal() {
-  const { t, L } = useI18n()
+  const { t, L, locale } = useI18n()
   const section = useRef<HTMLElement>(null)
   const track = useRef<HTMLDivElement>(null)
   const isDesktop = useMediaQuery('(min-width: 1024px)')
@@ -48,7 +48,7 @@ export default function SolutionsHorizontal() {
       dir="ltr"
       className="relative overflow-hidden bg-ink py-20 text-white lg:h-screen lg:py-0"
     >
-      <div className="flex h-full flex-col justify-center gap-12 lg:gap-16">
+      <div className="flex h-full flex-col justify-center gap-10 lg:gap-12">
         <div className="container-x">
           <SectionHeading
             eyebrow={t.solutions.eyebrow}
@@ -74,33 +74,38 @@ export default function SolutionsHorizontal() {
             <Link
               key={p.id}
               to={`/produits/${p.slug}`}
-              className="group relative w-[78vw] shrink-0 sm:w-[52vw] lg:w-[30vw] xl:w-[26vw]"
+              dir={locale === 'ar' ? 'rtl' : 'ltr'}
+              className="group flex w-[74vw] shrink-0 flex-col sm:w-[46vw] lg:w-[min(26vw,38vh)]"
             >
-              <div className="relative aspect-3/4 overflow-hidden rounded-xl">
+              <div className="relative overflow-hidden rounded-xl">
                 <Media
                   src={p.media.src}
                   alt={L(p.media.alt)}
-                  className="h-full w-full"
-                  imgClassName="transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.07]"
-                  sizes="(max-width: 1024px) 78vw, 28vw"
+                  className="aspect-4/5 w-full"
+                  imgClassName="transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
+                  sizes="(max-width: 1024px) 74vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <span className="text-[0.62rem] uppercase tracking-[0.22em] text-white/55">
-                    0{i + 1} · {p.category}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+                <span className="absolute top-4 inline-flex items-center rounded-full bg-black/45 px-3 py-1 text-[0.58rem] uppercase tracking-[0.2em] text-white/80 backdrop-blur-sm ltr:left-4 rtl:right-4">
+                  0{i + 1}
+                </span>
+              </div>
+
+              <div className="mt-4 flex items-start justify-between gap-4 border-t border-white/12 pt-4">
+                <div className="min-w-0">
+                  <span className="text-[0.58rem] uppercase tracking-[0.2em] text-white/45">
+                    {p.category}
                   </span>
-                  <h3 className="mt-2 font-display text-xl leading-tight tracking-[-0.02em] text-white">
+                  <h3 className="mt-1.5 font-display text-lg leading-tight tracking-[-0.02em] text-white">
                     {L(p.name)}
                   </h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-white/65">{L(p.tagline)}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.18em] text-white">
-                    {t.solutions.discover}
-                    <ArrowRight
-                      size={14}
-                      className="transition-transform duration-500 group-hover:translate-x-1"
-                    />
-                  </span>
+                  <p className="mt-1.5 line-clamp-2 text-sm leading-snug text-white/55">
+                    {L(p.tagline)}
+                  </p>
                 </div>
+                <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-500 group-hover:border-brand-light group-hover:bg-brand-light group-hover:text-ink">
+                  <ArrowUpRight size={15} className="rtl:-scale-x-100" />
+                </span>
               </div>
             </Link>
           ))}
