@@ -9,10 +9,12 @@ import { company } from './company'
 import { products } from './products'
 import { projects, projectCategories } from './projects'
 import { materials, processSteps, qualities, services } from './services'
+import { momoBox } from './momobox'
 import type { Product, Project } from './types'
 
 export * from './types'
-export { company, products, projects, projectCategories, materials, processSteps, qualities, services }
+export { company, products, projects, projectCategories, materials, processSteps, qualities, services, momoBox }
+export * from './momobox'
 
 export const contentClient = {
   getCompany: async () => company,
@@ -27,6 +29,7 @@ export const contentClient = {
   getQualities: async () => qualities,
   getProcess: async () => processSteps,
   getMaterials: async () => materials,
+  getMomoBox: async () => momoBox,
   /** Contact requests — plug a real endpoint (API route, Formspree, CRM) here. */
   submitContactRequest: async (payload: Record<string, string>) => {
     const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined

@@ -17,6 +17,7 @@ export default function Header() {
     { to: '/', label: t.nav.home },
     { to: '/solutions', label: t.nav.solutions },
     { to: '/produits', label: t.nav.products },
+    { to: '/momo-box', label: t.momo.nav },
     { to: '/realisations', label: t.nav.projects },
     { to: '/a-propos', label: t.nav.about },
     { to: '/contact', label: t.nav.contact },
@@ -74,7 +75,7 @@ export default function Header() {
             <Logo />
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Navigation principale">
+          <nav className="hidden items-center gap-6 xl:gap-8 lg:flex" aria-label="Navigation principale">
             {links.map((l) => (
               <NavLink
                 key={l.to}

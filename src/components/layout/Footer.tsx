@@ -11,6 +11,7 @@ export default function Footer() {
   const links = [
     { to: '/solutions', label: t.nav.solutions },
     { to: '/produits', label: t.nav.products },
+    { to: '/momo-box', label: t.momo.nav },
     { to: '/realisations', label: t.nav.projects },
     { to: '/a-propos', label: t.nav.about },
     { to: '/contact', label: t.nav.contact },
@@ -48,6 +49,16 @@ export default function Footer() {
                 <Phone size={14} /> {company.phone}
               </a>
             </li>
+            {company.phoneAlt ? (
+              <li>
+                <a
+                  href={`tel:${company.phoneAlt.replace(/\s/g, '')}`}
+                  className="inline-flex items-center gap-2 hover:text-white"
+                >
+                  <Phone size={14} /> {company.phoneAlt}
+                </a>
+              </li>
+            ) : null}
             <li>
               <a
                 href={`mailto:${company.email}`}

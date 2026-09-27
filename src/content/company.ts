@@ -8,13 +8,17 @@ import type { CompanyInfo } from './types'
 export const company: CompanyInfo = {
   name: 'Cristalu Maroc',
   legalName: 'Cristalu Maroc',
-  placeholders: ['phone', 'whatsapp', 'email', 'address', 'mapEmbed', 'social'],
-  phone: '+212 000 000 000', // À COMPLÉTER
-  whatsapp: '212000000000', // À COMPLÉTER (format international sans +)
-  email: 'contact@cristalu.ma', // À COMPLÉTER
+  /** Ce qui reste à compléter avec l'entreprise. */
+  placeholders: ['address', 'mapEmbed', 'social'],
+  // Coordonnées issues des supports de communication Cristalu Nord.
+  phone: '+212 661 239 493',
+  phoneAlt: '+212 666 663 343',
+  whatsapp: '212661239493', // format international sans +
+  email: 'cristalunord@gmail.com',
+  website: 'www.cristalunord.com',
   address: {
-    fr: 'Adresse à compléter — Tanger, Maroc',
-    ar: 'العنوان (يرجى الإكمال) — طنجة، المغرب',
+    fr: 'Adresse à compléter — région de Tanger, Maroc',
+    ar: 'العنوان (يرجى الإكمال) — جهة طنجة، المغرب',
   },
   city: 'Tanger',
   // Generic Tanger map — replace with the exact showroom/workshop location.

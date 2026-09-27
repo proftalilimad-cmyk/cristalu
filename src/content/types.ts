@@ -77,8 +77,11 @@ export type CompanyInfo = {
   /** Placeholder values are flagged so they are easy to find & replace. */
   placeholders: string[]
   phone: string
+  /** second numéro affiché à côté du principal */
+  phoneAlt?: string
   whatsapp: string
   email: string
+  website?: string
   address: Localized
   city: string
   mapEmbed: string

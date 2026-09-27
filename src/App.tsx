@@ -13,6 +13,7 @@ import { useI18n } from './i18n'
 
 const Solutions = lazy(() => import('./pages/Solutions'))
 const Products = lazy(() => import('./pages/Products'))
+const MomoBox = lazy(() => import('./pages/MomoBox'))
 const ProductDetail = lazy(() => import('./pages/ProductDetail'))
 const Projects = lazy(() => import('./pages/Projects'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
@@ -76,6 +77,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/produits" element={<Products />} />
+            <Route path="/momo-box" element={<MomoBox />} />
             <Route path="/produits/:slug" element={<ProductDetail />} />
             <Route path="/realisations" element={<Projects />} />
             <Route path="/realisations/:slug" element={<ProjectDetail />} />

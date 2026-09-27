@@ -81,7 +81,7 @@ src/
     three/               MaterialsScene (profilés alu/PVC + vitrage en 3D)
     home/                les 11 sections de la home
     contact/             formulaire de devis
-  pages/                 Home, Solutions, Produits (+détail), Réalisations (+détail), À propos, Contact, 404
+  pages/                 Home, Solutions, Produits (+détail), MOMO Box, Réalisations (+détail), À propos, Contact, 404
 ```
 
 ## Parcours de la page d'accueil
@@ -101,6 +101,17 @@ src/
 10. **Typographie éditoriale** — LUMIÈRE / ESPACE / CONFORT / PRÉCISION / DESIGN → CRISTALU MAROC.
 11. **CTA final** + contact.
 
+## Page produit MOMO Box (`/momo-box`)
+
+Landing page dédiée au **coffre tunnel de rideau / volet roulant en polystyrène
+haute densité**, posé pendant le gros œuvre au-dessus des ouvertures :
+hero chantier, présentation produit, 6 points forts, schéma de principe
+(SVG, coffre / enrouleur / tablier / coulisses / menuiserie), 4 étapes de mise
+en œuvre, tableau comparatif (polystyrène vs béton vs bois), galerie,
+caractéristiques, FAQ et CTA WhatsApp + devis.
+Contenu éditable dans `src/content/momobox.ts` (FR/AR), bandeau promo
+désactivable via `momoBox.promo.active`.
+
 ## FR / AR
 
 - Bascule `FR | AR` dans le header (et dans le menu mobile).
@@ -118,7 +129,9 @@ src/
 
 ## À compléter avant mise en ligne
 
-1. `src/content/company.ts` — téléphone, WhatsApp, e-mail, adresse, Google Maps, réseaux.
+1. `src/content/company.ts` — adresse exacte, lien Google Maps et réseaux sociaux
+   (téléphones, WhatsApp et e-mail sont déjà renseignés : +212 661 239 493,
+   +212 666 663 343, cristalunord@gmail.com).
 2. `src/content/projects.ts` — vrais chantiers (photos, lieu, année, prestations).
 3. `src/components/home/BeforeAfter.tsx` — photos réelles avant/après (même cadrage).
 4. `index.html` — domaine réel dans les balises canonical / Open Graph / JSON-LD.
