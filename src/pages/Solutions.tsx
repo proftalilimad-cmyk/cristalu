@@ -55,16 +55,16 @@ export default function Solutions() {
       <section className="bg-mist py-20 lg:py-28">
         <div className="container-x grid gap-10 lg:grid-cols-3">
           {materials.map((m) => (
-            <Reveal key={m.id} className="flex flex-col gap-5">
+            <Reveal key={m.id} className="flex flex-col">
               <Media
                 src={m.fallbackImage.src}
                 alt={L(m.fallbackImage.alt)}
                 className="aspect-4/3 w-full rounded-xl"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
-              <h2 className="fluid-h3 font-display">{L(m.name)}</h2>
-              <p className="text-sm leading-relaxed text-graphite">{L(m.intro)}</p>
-              <ul className="flex flex-col gap-2 border-t border-ink/10 pt-4">
+              <h2 className="fluid-h3 mt-5 font-display">{L(m.name)}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-graphite">{L(m.intro)}</p>
+              <ul className="mt-5 flex flex-col gap-2 border-t border-ink/10 pt-4">
                 {m.points.map((p, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-graphite">
                     <span className="mt-2 h-px w-4 shrink-0 bg-brand" />

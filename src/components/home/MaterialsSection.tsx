@@ -119,7 +119,7 @@ export default function MaterialsSection() {
         ) : (
           <div className="container-x grid gap-6 pb-6 md:grid-cols-3">
             {materials.map((m, i) => (
-              <article key={m.id} className="flex flex-col gap-5">
+              <article key={m.id} className="flex flex-col gap-4">
                 <Media
                   src={m.fallbackImage.src}
                   alt={L(m.fallbackImage.alt)}
@@ -128,8 +128,8 @@ export default function MaterialsSection() {
                 />
                 <div>
                   <span className="eyebrow">0{i + 1}</span>
-                  <h3 className="fluid-h3 mt-2 font-display">{L(m.name)}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-graphite">{L(m.intro)}</p>
+                  <h3 className="fluid-h3 mt-1.5 font-display">{L(m.name)}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-graphite">{L(m.intro)}</p>
                   <ul className="mt-4 flex flex-col gap-1.5">
                     {m.points.map((p, j) => (
                       <li key={j} className="text-sm text-steel">
