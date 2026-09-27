@@ -1,32 +1,58 @@
-type Props = { className?: string; tone?: 'dark' | 'light' }
+import { MARK_PATHS, MARK_VIEWBOX, WORD_PATHS, WORD_VIEWBOX } from './logoPaths'
 
-/** Typographic mark — no invented graphic identity, just a precise wordmark. */
-export default function Logo({ className = '', tone = 'dark' }: Props) {
-  const color = tone === 'light' ? 'text-white' : 'text-ink'
-  const sub = tone === 'light' ? 'text-white/55' : 'text-steel'
+type Props = {
+  className?: string
+  tone?: 'dark' | 'light'
+  /** symbole seul (favicon, mobile, watermark) */
+  markOnly?: boolean
+}
+
+/**
+ * Logo officiel Cristalu Maroc — tracés vectoriels issus du fichier source
+ * fourni par le client. Charte : noir #111111 + rouge #A30000.
+ * Sur fond sombre, le rouge est éclairci (#D23434) pour rester lisible.
+ */
+export default function Logo({ className = '', tone = 'dark', markOnly = false }: Props) {
+  const ink = tone === 'light' ? '#FFFFFF' : '#111111'
+  const red = tone === 'light' ? '#D23434' : '#A30000'
+  const sub = tone === 'light' ? 'text-white/60' : 'text-graphite'
+
+  const Mark = (
+    <svg
+      viewBox={MARK_VIEWBOX}
+      className="h-6 w-auto shrink-0 md:h-7"
+      role="img"
+      aria-label="Cristalu Maroc"
+      focusable="false"
+    >
+      {MARK_PATHS.map((p, i) => (
+        <path key={i} d={p.d} fill={p.tone === 'red' ? red : ink} />
+      ))}
+    </svg>
+  )
+
+  if (markOnly) return <span className={className}>{Mark}</span>
+
   return (
-    <span className={`flex items-center gap-3 ${className}`}>
-      <svg
-        viewBox="0 0 32 32"
-        className={`h-7 w-7 shrink-0 ${color}`}
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        aria-hidden
-      >
-        <rect x="4.5" y="3.5" width="23" height="25" />
-        <line x1="16" y1="3.5" x2="16" y2="28.5" />
-        <path d="M7.5 8 L13 8 L7.5 19 Z" fill="currentColor" opacity="0.35" stroke="none" />
-        <path d="M19 16 L24.5 16 L19 27 Z" fill="currentColor" opacity="0.2" stroke="none" />
-      </svg>
-      <span className="flex flex-col leading-none">
-        <span
-          className={`font-display text-[0.95rem] uppercase tracking-[0.2em] ${color}`}
-          style={{ fontWeight: 700 }}
+    <span className={`flex items-center gap-[0.5rem] md:gap-[0.6rem] ${className}`}>
+      {Mark}
+      <span className="flex flex-col items-stretch">
+        <svg
+          viewBox={WORD_VIEWBOX}
+          className="h-[0.78rem] w-auto md:h-[0.88rem]"
+          role="presentation"
+          aria-hidden="true"
+          focusable="false"
         >
-          Cristalu
+          {WORD_PATHS.map((p, i) => (
+            <path key={i} d={p.d} fill={ink} />
+          ))}
+        </svg>
+        <span
+          className={`mt-[0.35rem] text-end text-[0.46rem] font-medium uppercase leading-none tracking-[0.42em] ltr:pr-[0.12em] md:text-[0.5rem] ${sub}`}
+        >
+          Maroc
         </span>
-        <span className={`mt-1 text-[0.58rem] uppercase tracking-[0.42em] ${sub}`}>Maroc</span>
       </span>
     </span>
   )

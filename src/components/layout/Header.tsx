@@ -95,7 +95,7 @@ export default function Header() {
             <div className="hidden items-center gap-1 text-[0.72rem] font-medium tracking-[0.12em] sm:flex">
               <button
                 onClick={() => setLocale('fr')}
-                className={`px-2 py-1 transition-colors ${locale === 'fr' ? 'text-ink' : 'text-steel hover:text-graphite'}`}
+                className={`px-2 py-1 transition-colors ${locale === 'fr' ? 'text-brand' : 'text-steel hover:text-graphite'}`}
                 aria-pressed={locale === 'fr'}
               >
                 FR
@@ -103,7 +103,7 @@ export default function Header() {
               <span className="text-alu">|</span>
               <button
                 onClick={() => setLocale('ar')}
-                className={`px-2 py-1 transition-colors ${locale === 'ar' ? 'text-ink' : 'text-steel hover:text-graphite'}`}
+                className={`px-2 py-1 transition-colors ${locale === 'ar' ? 'text-brand' : 'text-steel hover:text-graphite'}`}
                 aria-pressed={locale === 'ar'}
               >
                 AR
@@ -112,7 +112,7 @@ export default function Header() {
 
             <Link
               to="/contact"
-              className="hidden items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-[0.72rem] font-medium uppercase tracking-[0.14em] text-paper transition-colors hover:bg-void md:inline-flex"
+              className="hidden items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[0.72rem] font-medium uppercase tracking-[0.14em] text-white transition-colors hover:bg-brand-dark md:inline-flex"
             >
               {t.nav.quote}
               <ArrowUpRight size={14} />
@@ -120,7 +120,7 @@ export default function Header() {
 
             <button
               onClick={() => setOpen((v) => !v)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors hover:border-ink/50 lg:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 text-ink transition-colors hover:border-brand hover:text-brand lg:hidden"
               aria-expanded={open}
               aria-label={open ? t.nav.close : t.nav.menu}
             >
@@ -146,7 +146,7 @@ export default function Header() {
                   to={l.to}
                   className="flex items-baseline gap-4 py-2 font-display text-[clamp(2rem,9vw,3.4rem)] leading-none tracking-[-0.04em]"
                 >
-                  <span className="text-[0.6rem] tracking-[0.2em] text-steel">
+                  <span className="text-[0.6rem] tracking-[0.2em] text-brand">
                     0{i + 1}
                   </span>
                   {l.label}
@@ -161,14 +161,14 @@ export default function Header() {
               <div className="flex gap-2 text-sm">
                 <button
                   onClick={() => setLocale('fr')}
-                  className={locale === 'fr' ? 'text-ink' : 'text-steel'}
+                  className={locale === 'fr' ? 'text-brand' : 'text-steel'}
                 >
                   Français
                 </button>
                 <span className="text-alu">/</span>
                 <button
                   onClick={() => setLocale('ar')}
-                  className={locale === 'ar' ? 'text-ink' : 'text-steel'}
+                  className={locale === 'ar' ? 'text-brand' : 'text-steel'}
                 >
                   العربية
                 </button>

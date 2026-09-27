@@ -9,6 +9,32 @@ coulissantes, façades vitrées, vérandas et solutions sur mesure.
 
 ---
 
+## Charte graphique (extraite du logo officiel)
+
+Le logo fourni (`assets/brand/logo-cristalu-maroc.pdf`) a été **vectorisé** :
+ses tracés alimentent directement le composant `src/components/layout/Logo.tsx`
+(`logoPaths.ts`), le favicon et les fichiers `public/logo-mark.svg` /
+`public/logo-cristalu.svg`.
+
+| Rôle | Couleur | Valeur | Origine |
+| --- | --- | --- | --- |
+| Noir de marque | ⬛ | `#111111` | logo (CMJN 91/79/62/97) |
+| Rouge Cristalu | 🟥 | `#A30000` | logo (CMJN 22/100/100/18) |
+| Rouge foncé (hover) | | `#7D0000` | dérivé |
+| Rouge clair (fond sombre) | | `#D23434` | dérivé, lisibilité AA |
+| Papier / off-white | | `#FAFAF9` | neutre architectural |
+| Brume / gris clair | | `#F0F1F1` | neutre |
+| Aluminium | | `#D7DADD` | neutre |
+| Acier (texte secondaire) | | `#9AA0A5` | neutre |
+| Graphite (texte courant) | | `#4A4F55` | neutre |
+
+Le rouge est utilisé **comme couleur de signal uniquement** (CTA principaux,
+filet sous les intitulés de section, filtres actifs, barre de progression,
+puces de la timeline, curseur au survol, bouton WhatsApp) — jamais en aplat
+massif, pour conserver le caractère architectural et minimal.
+Le typogramme d'origine utilise la police **Nexa Light** ; l'interface utilise
+Manrope (latin) et IBM Plex Sans Arabic (arabe), le logo restant vectoriel.
+
 ## Stack
 
 | Domaine | Choix |
@@ -33,6 +59,7 @@ npm run lint
 ## Structure
 
 ```
+assets/brand/            logo source (PDF) + rendu de référence
 assets/                  PNG sources (haute résolution) + maquettes hero
 public/media/            Images optimisées (WebP 480/800/1408 + JPG + LQIP)
 public/robots.txt        SEO

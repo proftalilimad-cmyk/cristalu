@@ -131,7 +131,7 @@ export default function ContactForm() {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-[0.72rem] uppercase tracking-[0.14em] text-paper"
+              className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[0.72rem] uppercase tracking-[0.14em] text-white"
             >
               <MessageCircle size={14} /> {t.contact.form.sendWhatsapp}
             </a>

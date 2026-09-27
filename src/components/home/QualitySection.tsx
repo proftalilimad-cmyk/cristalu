@@ -56,7 +56,7 @@ export default function QualitySection() {
                 className="group relative flex min-h-[18rem] flex-col justify-between bg-ink p-8 transition-colors duration-700 hover:bg-void"
               >
                 <div className="flex items-start justify-between">
-                  <span className="text-[0.62rem] uppercase tracking-[0.2em] text-white/35">
+                  <span className="text-[0.62rem] uppercase tracking-[0.2em] text-brand-light/80">
                     0{i + 1}
                   </span>
                   <span data-q-icon className="text-white/70">
@@ -67,7 +67,7 @@ export default function QualitySection() {
                   <h3 className="font-display text-2xl tracking-[-0.03em]">{L(q.title)}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-white/60">{L(q.description)}</p>
                 </div>
-                <span className="absolute inset-x-8 bottom-0 h-px origin-left scale-x-0 bg-white/40 transition-transform duration-700 group-hover:scale-x-100" />
+                <span className="absolute inset-x-8 bottom-0 h-px origin-left scale-x-0 bg-brand-light transition-transform duration-700 group-hover:scale-x-100" />
               </article>
             )
           })}

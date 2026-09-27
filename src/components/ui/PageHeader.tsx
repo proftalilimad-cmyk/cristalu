@@ -16,7 +16,10 @@ export default function PageHeader({ eyebrow, title, intro, image, children }: P
     <header className="relative bg-paper pb-14 pt-36 lg:pb-20 lg:pt-44">
       <div className="container-x">
         <Reveal>
-          <span className="eyebrow">{eyebrow}</span>
+          <span className="flex items-center gap-3">
+            <span className="h-px w-8 bg-brand" />
+            <span className="eyebrow">{eyebrow}</span>
+          </span>
         </Reveal>
         <SplitLines
           as="h1"

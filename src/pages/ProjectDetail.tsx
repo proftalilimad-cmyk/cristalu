@@ -115,7 +115,7 @@ export default function ProjectDetail() {
                 {L(next.title)}
               </h2>
             </div>
-            <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-ink/20 transition-all duration-500 group-hover:border-ink group-hover:bg-ink group-hover:text-paper">
+            <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-ink/20 transition-all duration-500 group-hover:border-brand group-hover:bg-brand group-hover:text-white">
               <ArrowUpRight size={18} />
             </span>
           </Link>

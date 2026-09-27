@@ -2,7 +2,7 @@ import { useRef, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap, isCoarsePointer, prefersReducedMotion } from '../../lib/animation'
 
-type Variant = 'solid' | 'outline' | 'ghost' | 'light'
+type Variant = 'solid' | 'outline' | 'ghost' | 'light' | 'invert'
 
 type BaseProps = {
   children: ReactNode
@@ -12,10 +12,11 @@ type BaseProps = {
 }
 
 const variantClass: Record<Variant, string> = {
-  solid: 'bg-ink text-paper hover:bg-void',
-  outline: 'border border-ink/25 text-ink hover:border-ink/70',
-  ghost: 'text-ink hover:opacity-70',
+  solid: 'bg-brand text-white hover:bg-brand-dark',
+  outline: 'border border-ink/25 text-ink hover:border-brand hover:text-brand',
+  ghost: 'text-ink hover:text-brand',
   light: 'border border-white/35 text-white hover:bg-white hover:text-ink',
+  invert: 'bg-white text-ink hover:bg-alu',
 }
 
 function useMagnetic(strength: number) {

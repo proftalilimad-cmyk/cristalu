@@ -53,7 +53,7 @@ export default function ProcessTimeline() {
             aria-hidden
             className="absolute top-0 h-full w-px bg-ink/10 ltr:left-0 rtl:right-0 md:ltr:left-[9.5rem] md:rtl:right-[9.5rem]"
           >
-            <div data-line className="h-full w-px origin-top bg-ink/70" />
+            <div data-line className="h-full w-px origin-top bg-brand" />
           </div>
 
           <ol className="flex flex-col">
@@ -64,7 +64,7 @@ export default function ProcessTimeline() {
                 className="group relative grid grid-cols-1 gap-2 border-b border-ink/10 py-8 last:border-b-0 md:grid-cols-[9.5rem_1fr] md:gap-10"
               >
                 <div className="flex items-baseline gap-4 md:block">
-                  <span className="font-display text-3xl tracking-[-0.04em] text-ink/25 transition-colors duration-500 group-hover:text-ink md:text-4xl">
+                  <span className="font-display text-3xl tracking-[-0.04em] text-ink/20 transition-colors duration-500 group-hover:text-brand md:text-4xl">
                     {step.index}
                   </span>
                 </div>
@@ -76,7 +76,7 @@ export default function ProcessTimeline() {
                 </div>
                 <span
                   aria-hidden
-                  className="absolute top-[3.4rem] hidden h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-paper ring-1 ring-ink/40 transition-all duration-500 group-hover:bg-ink md:block ltr:left-[9.5rem] rtl:right-[9.5rem] rtl:translate-x-1/2"
+                  className="absolute top-[3.4rem] hidden h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-paper ring-1 ring-ink/30 transition-all duration-500 group-hover:bg-brand group-hover:ring-brand md:block ltr:left-[9.5rem] rtl:right-[9.5rem] rtl:translate-x-1/2"
                 />
               </li>
             ))}

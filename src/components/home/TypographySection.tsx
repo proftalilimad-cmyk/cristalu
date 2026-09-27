@@ -59,8 +59,10 @@ export default function TypographySection() {
           <div className="font-display text-[clamp(1.8rem,8.5vw,8.5rem)] font-extrabold uppercase leading-none tracking-[-0.055em]">
             {t.typo.brand}
           </div>
-          <div className="mt-6 text-[0.65rem] uppercase tracking-[0.42em] text-steel">
+          <div className="mt-6 flex items-center justify-center gap-3 text-[0.65rem] uppercase tracking-[0.42em] text-steel">
+            <span className="h-px w-8 bg-brand" />
             Aluminium · PVC · Verre
+            <span className="h-px w-8 bg-brand" />
           </div>
         </div>
       </div>

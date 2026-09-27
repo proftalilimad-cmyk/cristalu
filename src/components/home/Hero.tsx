@@ -102,7 +102,7 @@ export default function Hero() {
       <div data-hero-content className="container-x relative z-10 pb-16 pt-32 md:pt-24">
         <div className="max-w-2xl">
           <div data-hero-line className="mb-7 flex items-center gap-3">
-            <span className="h-px w-10 bg-ink/40" />
+            <span className="h-px w-10 bg-brand" />
             <span className="eyebrow">{t.hero.since}</span>
           </div>
 

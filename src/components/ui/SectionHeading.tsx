@@ -32,7 +32,10 @@ export default function SectionHeading({
       <div className={`flex max-w-3xl flex-col gap-5 ${alignment}`}>
         {eyebrow ? (
           <Reveal>
-            <span className={`eyebrow ${eyebrowTone}`}>{eyebrow}</span>
+            <span className="flex items-center gap-3">
+              <span className="h-px w-8 bg-brand" />
+              <span className={`eyebrow ${eyebrowTone}`}>{eyebrow}</span>
+            </span>
           </Reveal>
         ) : null}
         <SplitLines as="h2" text={title} className="fluid-h2 font-display" />

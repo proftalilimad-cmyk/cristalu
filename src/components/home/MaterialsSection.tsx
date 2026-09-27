@@ -97,7 +97,7 @@ export default function MaterialsSection() {
                   <ul className="mt-6 flex flex-col gap-2">
                     {active.points.map((p, i) => (
                       <li key={i} className="flex items-start gap-3 text-sm text-graphite">
-                        <span className="mt-2 h-px w-4 shrink-0 bg-ink/30" />
+                        <span className="mt-2 h-px w-4 shrink-0 bg-brand" />
                         {L(p)}
                       </li>
                     ))}

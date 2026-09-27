@@ -41,7 +41,7 @@ export function ProjectCard({
         <div className="absolute inset-x-0 bottom-0 translate-y-2 p-6 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0">
           <div className="flex items-center gap-3 text-[0.62rem] uppercase tracking-[0.2em] text-white/60">
             <span>{category}</span>
-            <span className="h-px w-5 bg-white/40" />
+            <span className="h-px w-5 bg-brand-light" />
             <span>{year}</span>
           </div>
           <h3 className="mt-2 font-display text-2xl leading-tight tracking-[-0.025em] text-white">

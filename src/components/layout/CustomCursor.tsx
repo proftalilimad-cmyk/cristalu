@@ -28,7 +28,7 @@ export default function CustomCursor() {
       const interactive = target?.closest('a, button, [data-cursor="link"], input, select, textarea')
       gsap.to(r, {
         scale: interactive ? 1.9 : 1,
-        borderColor: interactive ? 'rgba(22,24,27,0.85)' : 'rgba(22,24,27,0.3)',
+        borderColor: interactive ? 'rgba(163,0,0,0.9)' : 'rgba(17,17,17,0.3)',
         duration: 0.4,
         overwrite: 'auto',
       })
@@ -48,7 +48,7 @@ export default function CustomCursor() {
       <div
         ref={ring}
         className="absolute left-0 top-0 h-8 w-8 rounded-full border border-ink/30 mix-blend-difference"
-        style={{ borderColor: 'rgba(22,24,27,0.3)' }}
+        style={{ borderColor: 'rgba(17,17,17,0.3)' }}
       />
       <div ref={dot} className="absolute left-0 top-0 h-1.5 w-1.5 rounded-full bg-ink" />
     </div>

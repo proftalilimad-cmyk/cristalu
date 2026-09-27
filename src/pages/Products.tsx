@@ -30,8 +30,8 @@ export default function Products() {
               onClick={() => setFilter(f.id)}
               className={`rounded-full border px-5 py-2 text-[0.72rem] uppercase tracking-[0.14em] transition-colors ${
                 filter === f.id
-                  ? 'border-ink bg-ink text-paper'
-                  : 'border-ink/20 text-graphite hover:border-ink/60'
+                  ? 'border-brand bg-brand text-white'
+                  : 'border-ink/20 text-graphite hover:border-brand hover:text-brand'
               }`}
             >
               {L(f.label)}

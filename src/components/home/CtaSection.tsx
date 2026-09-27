@@ -46,7 +46,7 @@ export default function CtaSection() {
           <p className="max-w-xl text-base leading-relaxed text-white/70">{t.cta.text}</p>
         </Reveal>
         <Reveal delay={0.18} className="flex flex-wrap gap-3">
-          <MagneticLink to="/contact" variant="solid" className="bg-white text-ink hover:bg-alu">
+          <MagneticLink to="/contact" variant="invert">
             {t.cta.btn1}
             <ArrowUpRight size={15} />
           </MagneticLink>
