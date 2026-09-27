@@ -35,6 +35,18 @@ massif, pour conserver le caractère architectural et minimal.
 Le typogramme d'origine utilise la police **Nexa Light** ; l'interface utilise
 Manrope (latin) et IBM Plex Sans Arabic (arabe), le logo restant vectoriel.
 
+## Scène 3D (section Matériaux)
+
+Le profilé aluminium n'est plus un simple tube : sa **coupe réelle** est décrite
+dans `src/components/three/aluSection.json` et extrudée par Three.js —
+coque extérieure avec jambe de vitrage, coque intérieure, **deux barrettes
+polyamide (rupture de pont thermique)**, parclose clipsée, bouchon de vis,
+joints EPDM, intercalaire et double vitrage. Les faces de coupe et les faces
+longitudinales reçoivent deux matériaux distincts (aspect scié / anodisé),
+avec éclairage studio, reflet balayant et ombre de contact.
+Modifier la coupe = modifier le JSON, aucune retouche de code nécessaire.
+Aperçu de contrôle : `assets/brand/profil-alu-coupe-reference.png`.
+
 ## Stack
 
 | Domaine | Choix |
