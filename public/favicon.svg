@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cristalu Maroc">
+  <rect width="64" height="64" rx="12" fill="#111111"/>
+  <g transform="translate(9.00 19.81) scale(0.26541)">
+    <path fill="#FFFFFF" d="M 91.08 27.26 L 23.07 19.26 L 23.07 72.60 L 91.08 65.04 L 91.08 74.38 L 0.00 91.86 L 0.00 0.00 L 91.08 15.26 Z"/>
+    <path fill="#E04141" d="M 173.31 26.81 L 123.97 21.92 L 148.64 45.93 L 123.97 69.93 L 173.31 65.04 Z"/>
+    <path fill="#E04141" d="M 173.31 15.92 L 96.63 1.70 L 173.31 19.48 Z"/>
+    <path fill="#E04141" d="M 173.31 72.60 L 173.31 75.71 L 96.63 90.38 Z"/>
+    <path fill="#E04141" d="M 99.52 17.92 L 132.64 45.93 L 99.52 72.60 L 127.97 45.93 Z"/>
+  </g>
+</svg>
