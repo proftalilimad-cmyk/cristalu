@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cristalu Maroc — Hero banners (3 options)</title>
+<style>
+  :root{
+    --anthracite:#2b2f33;
+    --grey:#6b7280;
+    --line:#e5e7eb;
+    --accent:#A30000;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;background:#f6f7f8;color:var(--anthracite)}
+  header{padding:28px 40px;background:#fff;border-bottom:1px solid var(--line)}
+  header h1{font-size:18px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  header h1 span{color:var(--accent)}
+  header p{margin-top:6px;font-size:13px;color:var(--grey)}
+  .label{padding:22px 40px 10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+  .hero{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#fff}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.75) 34%,rgba(255,255,255,0) 55%)}
+  .hero .content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 6%;max-width:52%}
+  .eyebrow{font-size:clamp(9px,.85vw,13px);letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:1.2em}
+  .title{font-size:clamp(20px,3.1vw,50px);line-height:1.08;font-weight:700;letter-spacing:-.02em}
+  .title em{font-style:normal;color:var(--accent)}
+  .sub{margin-top:1em;font-size:clamp(10px,1.05vw,17px);line-height:1.6;color:#4b5563;max-width:34ch}
+  .cta{margin-top:1.6em;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{font-size:clamp(9px,.85vw,14px);padding:.85em 1.7em;border-radius:2px;text-decoration:none;font-weight:600;letter-spacing:.04em}
+  .btn-1{background:var(--anthracite);color:#fff}
+  .btn-2{border:1px solid var(--anthracite);color:var(--anthracite)}
+  .meta{display:flex;gap:26px;margin-top:2em;font-size:clamp(8px,.72vw,12px);letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+  footer{padding:36px 40px;font-size:12px;color:var(--grey)}
+</style>
+</head>
+<body>
+<header>
+  <h1>CRISTAL<span>U</span> MAROC — Hero banners</h1>
+  <p>3 options 16:9 · aluminium &amp; PVC · espace de texte réservé à gauche</p>
+</header>
+
+<div class="label">Option 1 — Villa de luxe · baies coulissantes panoramiques aluminium</div>
+<section class="hero">
+  <img src="cristalu-hero-option-1.png" alt="Option 1">
+  <div class="veil"></div>
+  <div class="content">
+    <div class="eyebrow">Aluminium &amp; PVC · Sur mesure</div>
+    <div class="title">L'élégance du verre,<br>la précision de <em>l'aluminium</em>.</div>
+    <p class="sub">Fenêtres, portes, coulissants et façades conçus, fabriqués et posés au Maroc selon les standards les plus exigeants.</p>
+    <div class="cta"><a class="btn btn-1" href="#">Demander un devis</a><a class="btn btn-2" href="#">Nos réalisations</a></div>
+    <div class="meta"><span>Isolation thermique</span><span>Confort acoustique</span><span>Garantie 10 ans</span></div>
+  </div>
+</section>
+
+<div class="label">Option 2 — Résidence contemporaine · fenêtres PVC &amp; aluminium</div>
+<section class="hero">
+  <img src="cristalu-hero-option-2.png" alt="Option 2">
+  <div class="veil"></div>
+  <div class="content">
+    <div class="eyebrow">Menuiserie aluminium &amp; PVC</div>
+    <div class="title">Des ouvertures qui<br>changent <em>tout</em>.</div>
+    <p class="sub">Performance thermique et acoustique, finitions impeccables, profilés certifiés. Du particulier au promoteur.</p>
+    <div class="cta"><a class="btn btn-1" href="#">Devis gratuit</a><a class="btn btn-2" href="#">Nos gammes</a></div>
+    <div class="meta"><span>Étude technique</span><span>Fabrication locale</span><span>Pose certifiée</span></div>
+  </div>
+</section>
+
+<div class="label">Option 3 — Façade architecturale · aluminium, PVC &amp; grandes surfaces vitrées</div>
+<section class="hero">
+  <img src="cristalu-hero-option-3.png" alt="Option 3">
+  <div class="veil"></div>
+  <div class="content">
+    <div class="eyebrow">Façades &amp; murs-rideaux</div>
+    <div class="title">Bâtir la lumière,<br>maîtriser <em>la performance</em>.</div>
+    <p class="sub">Solutions aluminium et PVC pour projets résidentiels, tertiaires et hôteliers partout au Maroc.</p>
+    <div class="cta"><a class="btn btn-1" href="#">Parler à un expert</a><a class="btn btn-2" href="#">Nos références</a></div>
+    <div class="meta"><span>Bureau d'études</span><span>Grands chantiers</span><span>Délais tenus</span></div>
+  </div>
+</section>
+
+<footer>Les textes affichés sont des placeholders de démonstration — ils servent à valider la lisibilité et l'espace négatif à gauche.</footer>
+</body>
+</html>
