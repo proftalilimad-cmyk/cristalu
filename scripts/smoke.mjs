@@ -91,8 +91,8 @@ const expectations = [
   'Double vitrage',
   'Réfléchissant',
   'Contact',
-  // Slide vidéo (film)
-  'CRISTALUM en images',
+  // Slider « en images » intégré au hero
+  'L’intérieur ouvert sur le jardin',
   'film-sejour-1600.webp',
   // Carte du Maroc : contour réel + villes accessibles
   'Carte du Maroc',

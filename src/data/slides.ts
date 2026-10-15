@@ -1,5 +1,5 @@
 /**
- * Slides du « film » CRISTALUM (section SlideVideo).
+ * Slides du « film » CRISTALUM — décor cinématique du hero (section Hero).
  *
  * `video` : chemin d'un fichier mp4 réel (ex. '/videos/film-sejour.mp4').
  * Déposez vos rushs dans `public/videos/` puis renseignez le champ — tant que

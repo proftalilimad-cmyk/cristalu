@@ -179,7 +179,7 @@ export function Configurator() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="07" tone="dark">
+              <Eyebrow index="06" tone="dark">
                 Configurateur
               </Eyebrow>
             </Reveal>

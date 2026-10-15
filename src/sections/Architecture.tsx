@@ -87,7 +87,7 @@ export function Architecture() {
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div>
               <Reveal y={16} duration={0.7}>
-                <Eyebrow index="10" tone="dark">
+                <Eyebrow index="09" tone="dark">
                   Architecture marocaine
                 </Eyebrow>
               </Reveal>

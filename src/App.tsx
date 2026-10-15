@@ -15,7 +15,6 @@ import { About } from '@/sections/About'
 import { AluminiumExperience } from '@/sections/AluminiumExperience'
 import { Services } from '@/sections/Services'
 import { BeforeAfter } from '@/sections/BeforeAfter'
-import { SlideVideo } from '@/sections/SlideVideo'
 import { Gallery } from '@/sections/Gallery'
 import { Configurator } from '@/sections/Configurator'
 import { Process } from '@/sections/Process'
@@ -59,7 +58,6 @@ export function App() {
       <Header />
       <main id="contenu" className={booted ? '' : 'pointer-events-none'}>
         <Hero />
-        <SlideVideo />
         <ValuesMarquee />
         <About />
         <AluminiumExperience />

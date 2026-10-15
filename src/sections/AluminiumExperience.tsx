@@ -138,7 +138,7 @@ export function AluminiumExperience() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="03" tone="dark">
+              <Eyebrow index="02" tone="dark">
                 Expérience 3D · Menuiserie interactive
               </Eyebrow>
             </Reveal>

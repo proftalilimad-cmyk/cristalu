@@ -105,7 +105,7 @@ export function About() {
           {/* Texte */}
           <div className="flex flex-col justify-center pt-8 lg:pt-0">
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="02">À propos · L’atelier</Eyebrow>
+              <Eyebrow index="01">À propos · L’atelier</Eyebrow>
             </Reveal>
 
             <RevealText

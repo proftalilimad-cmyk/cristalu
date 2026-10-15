@@ -114,7 +114,7 @@ export function ServiceArea() {
           {/* Contenu */}
           <div>
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="11">Zone d’intervention</Eyebrow>
+              <Eyebrow index="10">Zone d’intervention</Eyebrow>
             </Reveal>
             <RevealText
               text="Nous intervenons dans plusieurs villes du Maroc"

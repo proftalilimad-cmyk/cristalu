@@ -106,9 +106,9 @@ npm run preview  # contrôle visuel du build
 - [ ] Test sur mobile réel : hero 3D, configurateur, formulaire, CTA collant
 - [ ] Domaine réel dans `index.html` et `sitemap.xml`
 
-## Slider vidéo (section « Le film »)
+## Slider vidéo (décor du hero)
 
-Le slider accepte de **vraies vidéos mp4** : déposez vos rushs dans `public/videos/`
+Le slider du hero accepte de **vraies vidéos mp4** : déposez vos rushs dans `public/videos/`
 (ex. `film-sejour.mp4`, format 16:9, 1080p, ~5-15 s, muet ou avec son) puis renseignez
 le champ `video` de la slide dans `src/data/slides.ts` :
 
