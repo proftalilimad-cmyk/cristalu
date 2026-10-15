@@ -218,7 +218,7 @@ export function Services() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="03">Solutions</Eyebrow>
+              <Eyebrow index="04">Solutions</Eyebrow>
             </Reveal>
             <RevealText
               text="Une gamme complète, pensée pour durer"

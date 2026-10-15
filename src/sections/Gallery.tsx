@@ -38,7 +38,7 @@ export function Gallery() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="05">Réalisations</Eyebrow>
+              <Eyebrow index="06">Réalisations</Eyebrow>
             </Reveal>
             <RevealText
               text="Un portfolio d’architectures"

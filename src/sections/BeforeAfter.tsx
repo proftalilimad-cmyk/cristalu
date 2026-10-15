@@ -45,7 +45,7 @@ export function BeforeAfter() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-16">
           <div>
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="04" tone="dark">
+              <Eyebrow index="05" tone="dark">
                 Avant / Après
               </Eyebrow>
             </Reveal>

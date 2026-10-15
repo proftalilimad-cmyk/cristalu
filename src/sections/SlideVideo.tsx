@@ -101,7 +101,7 @@ export function SlideVideo() {
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div>
             <Reveal y={14} duration={0.6}>
-              <Eyebrow index="05">Le film</Eyebrow>
+              <Eyebrow index="01" tone="dark">Le film</Eyebrow>
             </Reveal>
             <RevealText
               text="CRISTALUM en images"

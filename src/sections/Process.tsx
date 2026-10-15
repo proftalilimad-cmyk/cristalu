@@ -105,7 +105,7 @@ export function Process() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <Reveal y={16} duration={0.7}>
-                <Eyebrow index="07" tone="dark">
+                <Eyebrow index="08" tone="dark">
                   Notre expertise · Méthode
                 </Eyebrow>
               </Reveal>

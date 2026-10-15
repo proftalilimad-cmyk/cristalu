@@ -59,12 +59,12 @@ export function App() {
       <Header />
       <main id="contenu" className={booted ? '' : 'pointer-events-none'}>
         <Hero />
+        <SlideVideo />
         <ValuesMarquee />
         <About />
         <AluminiumExperience />
         <Services />
         <BeforeAfter />
-        <SlideVideo />
         <Gallery />
         <Configurator />
         <Process />

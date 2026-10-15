@@ -127,7 +127,7 @@ export function Quote() {
           {/* Colonne de présentation + coordonnées */}
           <div>
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="11" tone="dark">
+              <Eyebrow index="12" tone="dark">
                 Contact · Devis
               </Eyebrow>
             </Reveal>
