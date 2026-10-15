@@ -8,7 +8,7 @@
 
 /* ------------------------------------------------------------------ *
  *  CRISTALUM — Design tokens
- *  Aesthetic: anthracite aluminium + glass + Moroccan warmth
+ *  Aesthetic: anthracite aluminium + verre + accent rouge CRISTALUM
  * ------------------------------------------------------------------ */
 @theme {
   /* Ink / anthracite scale (structure, aluminium profiles) */
@@ -30,19 +30,14 @@
   --color-alu-600: #6f777e;
   --color-alu-700: #545c63;
 
-  /* Glass / glacier accent (reflections, light) */
-  --color-glacier-200: #dff1f7;
-  --color-glacier-300: #b6e2ef;
-  --color-glacier-400: #8fd3e8;
-  --color-glacier-500: #5cb4d2;
-  --color-glacier-600: #3d8fae;
-  --color-glacier-700: #2d6c85;
-
-  /* Moroccan warmth (bronze / clay) — used sparingly */
-  --color-bronze-300: #e2c39c;
-  --color-bronze-400: #c8945f;
-  --color-bronze-500: #a9743f;
-  --color-bronze-600: #83562c;
+  /* Rouge CRISTALUM — accent de marque (reflets, lumière, alertes) */
+  --color-accent-100: #fde8e9;
+  --color-accent-200: #f9c2c5;
+  --color-accent-300: #f08c91;
+  --color-accent-400: #e2494f;
+  --color-accent-500: #c8102e;
+  --color-accent-600: #a60d25;
+  --color-accent-700: #7d0a1c;
 
   --font-sans:
     'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -56,6 +51,7 @@
   --shadow-glass: 0 1px 0 0 rgb(255 255 255 / 0.08) inset, 0 24px 60px -32px rgb(6 8 10 / 0.55);
   --shadow-float: 0 40px 90px -50px rgb(6 8 10 / 0.65);
   --shadow-lift: 0 20px 45px -25px rgb(6 8 10 / 0.5);
+  --shadow-accent: 0 22px 50px -26px rgb(200 16 46 / 0.6);
 
   --ease-cristal: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-engineered: cubic-bezier(0.65, 0.05, 0.36, 1);
@@ -173,8 +169,8 @@
   }
 
   ::selection {
-    background: var(--color-glacier-400);
-    color: var(--color-ink-900);
+    background: var(--color-accent-500);
+    color: #ffffff;
   }
 
   h1,
@@ -192,7 +188,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-glacier-500);
+    outline: 2px solid var(--color-accent-500);
     outline-offset: 3px;
     border-radius: 2px;
   }
@@ -301,7 +297,7 @@
 /* Glass pane gradient for cards & overlays */
 @utility glass-pane {
   background:
-    linear-gradient(135deg, rgb(255 255 255 / 0.14) 0%, rgb(255 255 255 / 0.04) 38%, rgb(143 211 232 / 0.08) 100%);
+    linear-gradient(135deg, rgb(255 255 255 / 0.14) 0%, rgb(255 255 255 / 0.04) 38%, rgb(226 73 79 / 0.1) 100%);
   border: 1px solid rgb(255 255 255 / 0.14);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
@@ -316,15 +312,15 @@
 }
 
 @utility text-metal-light {
-  background: linear-gradient(103deg, #f4f7f9 0%, #aab4bb 22%, #ffffff 44%, #8fd3e8 62%, #cfd8dd 82%, #ffffff 100%);
+  background: linear-gradient(103deg, #f4f7f9 0%, #a8afb5 22%, #ffffff 44%, #ef6b72 62%, #cfd8dd 82%, #ffffff 100%);
   background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-@utility text-glacier-sheen {
-  background: linear-gradient(100deg, #e9f6fa 0%, #8fd3e8 32%, #ffffff 52%, #5cb4d2 78%, #dff1f7 100%);
+@utility text-accent-sheen {
+  background: linear-gradient(100deg, #fff0f1 0%, #e2494f 32%, #ffffff 52%, #c8102e 78%, #fde8e9 100%);
   background-size: 260% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -363,7 +359,7 @@
     linear-gradient(150deg, rgb(255 255 255 / 0.05) 12%, transparent 12.5%, transparent 87%, rgb(255 255 255 / 0.05) 87.5%),
     linear-gradient(30deg, rgb(255 255 255 / 0.05) 12%, transparent 12.5%, transparent 87%, rgb(255 255 255 / 0.05) 87.5%),
     linear-gradient(150deg, rgb(255 255 255 / 0.05) 12%, transparent 12.5%, transparent 87%, rgb(255 255 255 / 0.05) 87.5%),
-    linear-gradient(60deg, rgb(143 211 232 / 0.06) 25%, transparent 25.5%, transparent 75%, rgb(143 211 232 / 0.06) 75%);
+    linear-gradient(60deg, rgb(200 16 46 / 0.07) 25%, transparent 25.5%, transparent 75%, rgb(200 16 46 / 0.07) 75%);
   background-size: 56px 98px;
   background-position:
     0 0,

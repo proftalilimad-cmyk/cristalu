@@ -46,14 +46,14 @@ function Counter({
   return (
     <div
       ref={ref}
-      className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-6 backdrop-blur-xl transition-[transform,border-color] duration-700 hover:-translate-y-1 hover:border-glacier-400/40"
+      className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-6 backdrop-blur-xl transition-[transform,border-color] duration-700 hover:-translate-y-1 hover:border-accent-400/40"
     >
-      <Icon className="size-5 text-glacier-400" strokeWidth={1.6} />
+      <Icon className="size-5 text-accent-400" strokeWidth={1.6} />
       <p className="mt-6 font-display text-[clamp(2.2rem,5vw,3.2rem)] leading-none tracking-tight text-alu-100">
         {Math.round(animated)}
       </p>
       <p className="mt-3 text-[0.84rem] leading-snug text-alu-400">{label}</p>
-      <span className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-glacier-400/10 blur-2xl transition-opacity duration-700 group-hover:opacity-100" />
+      <span className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-accent-400/10 blur-2xl transition-opacity duration-700 group-hover:opacity-100" />
     </div>
   )
 }
@@ -86,10 +86,10 @@ export function WhyCristalum() {
         <Reveal y={26} delay={0.06} stagger={0.07} className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {years && (
             <div className="group relative overflow-hidden rounded-[1.5rem] border border-ink-900/10 bg-ink-900 p-6 text-alu-100">
-              <Wind className="size-5 text-glacier-400" strokeWidth={1.6} />
+              <Wind className="size-5 text-accent-400" strokeWidth={1.6} />
               <p className="mt-6 font-display text-[clamp(2.2rem,5vw,3.2rem)] leading-none tracking-tight">
                 {years}
-                <span className="text-glacier-400">+</span>
+                <span className="text-accent-400">+</span>
               </p>
               <p className="mt-3 text-[0.84rem] leading-snug text-alu-400">Années d’expérience</p>
             </div>
@@ -103,7 +103,7 @@ export function WhyCristalum() {
           {pillars.map(({ title, text, icon: Icon }, i) => (
             <Reveal key={title} y={26} delay={i * 0.06}>
               <div className="group relative h-full overflow-hidden rounded-[1.5rem] border border-ink-900/10 bg-white/80 p-7 backdrop-blur-md transition-[transform,box-shadow] duration-700 hover:-translate-y-1.5 hover:shadow-[0_40px_80px_-60px_rgba(6,8,10,0.7)]">
-                <span className="flex size-12 items-center justify-center rounded-2xl border border-ink-900/10 bg-alu-100 text-ink-800 transition-all duration-700 group-hover:border-glacier-400/60 group-hover:text-glacier-700">
+                <span className="flex size-12 items-center justify-center rounded-2xl border border-ink-900/10 bg-alu-100 text-ink-800 transition-all duration-700 group-hover:border-accent-400/60 group-hover:text-accent-700">
                   <Icon className="size-5" strokeWidth={1.6} />
                 </span>
                 <h3 className="mt-6 font-display text-[1.2rem] tracking-tight text-ink-900">{title}</h3>

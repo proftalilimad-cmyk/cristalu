@@ -184,6 +184,6 @@ if (import.meta.env.DEV) {
       `\n • whatsapp.number (bouton WhatsApp masqué tant qu’il est vide)` +
       `\n • zone d’intervention (src/data/cities.ts)` +
       `\n→ Détails : TODO-CONTENU.md`,
-    'color:#5cb4d2;font-weight:600',
+    'color:#e2494f;font-weight:600',
   )
 }

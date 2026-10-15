@@ -175,7 +175,7 @@ export function Header() {
                       className="group flex items-baseline justify-between border-b border-white/8 py-4"
                     >
                       <span className="font-display text-[1.75rem] tracking-tight text-alu-100">{item.label}</span>
-                      <span className="text-[0.7rem] uppercase tracking-[0.28em] text-glacier-400/70">
+                      <span className="text-[0.7rem] uppercase tracking-[0.28em] text-accent-400/70">
                         0{i + 1}
                       </span>
                     </a>

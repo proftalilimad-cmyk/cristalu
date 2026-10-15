@@ -91,9 +91,9 @@ export function MoroccoMap({ activeId, selectedName, onHover, onSelect, classNam
           <stop offset="1" stopColor="#b6bdc2" stopOpacity="0.88" />
         </linearGradient>
         <linearGradient id="cristalum-ma-line" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#8fd3e8" />
-          <stop offset="0.45" stopColor="#2d6c85" />
-          <stop offset="1" stopColor="#5cb4d2" />
+          <stop offset="0" stopColor="#f08c91" />
+          <stop offset="0.45" stopColor="#c8102e" />
+          <stop offset="1" stopColor="#e2494f" />
         </linearGradient>
         <filter id="cristalum-ma-shadow" x="-12%" y="-12%" width="124%" height="124%">
           <feDropShadow dx="0" dy="14" stdDeviation="18" floodColor="#06080a" floodOpacity="0.18" />
@@ -124,7 +124,7 @@ export function MoroccoMap({ activeId, selectedName, onHover, onSelect, classNam
         cx={ax}
         cy={ay}
         r="46"
-        fill="#5cb4d2"
+        fill="#e2494f"
         opacity="0.16"
         filter="url(#cristalum-ma-glow)"
         animate={{ r: [40, 52, 40], opacity: [0.1, 0.22, 0.1] }}
@@ -144,7 +144,7 @@ export function MoroccoMap({ activeId, selectedName, onHover, onSelect, classNam
                 y1={cy}
                 x2={ax}
                 y2={ay}
-                stroke="#5cb4d2"
+                stroke="#e2494f"
                 strokeOpacity="0.5"
                 strokeWidth="1.6"
                 strokeDasharray="12 9"
@@ -202,14 +202,14 @@ export function MoroccoMap({ activeId, selectedName, onHover, onSelect, classNam
             <circle r="46" fill="transparent" />
             <motion.circle
               r={isActive ? 11 : 8.5}
-              fill={isActive ? '#2d6c85' : isSelected ? '#5cb4d2' : '#6f777e'}
+              fill={isActive ? '#c8102e' : isSelected ? '#e2494f' : '#6f777e'}
               stroke="#ffffff"
               strokeWidth="3.4"
               animate={{ r: isActive ? 11 : 8.5 }}
               transition={{ type: 'spring', stiffness: 320, damping: 26 }}
             />
             {isSelected && (
-              <circle r="16" fill="none" stroke="#5cb4d2" strokeWidth="2.4" strokeOpacity="0.9" />
+              <circle r="16" fill="none" stroke="#e2494f" strokeWidth="2.4" strokeOpacity="0.9" />
             )}
             <text
               x={place.x - x}

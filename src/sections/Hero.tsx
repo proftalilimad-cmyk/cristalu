@@ -128,8 +128,8 @@ export function Hero() {
             className="glass-pane mb-7 inline-flex items-center gap-2.5 rounded-full py-2 pl-3 pr-4 text-[0.7rem] font-medium uppercase tracking-[0.22em] text-alu-200"
           >
             <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full animate-pulse-ring rounded-full bg-glacier-400" />
-              <span className="relative inline-flex size-2 rounded-full bg-glacier-400" />
+              <span className="absolute inline-flex size-full animate-pulse-ring rounded-full bg-accent-400" />
+              <span className="relative inline-flex size-2 rounded-full bg-accent-400" />
             </span>
             Maroc · Sur mesure
           </motion.div>
@@ -194,7 +194,7 @@ export function Hero() {
           >
             {specs.map(({ icon: Icon, label }) => (
               <li key={label} className="flex items-center gap-2.5 text-[0.78rem] text-alu-300/75">
-                <Icon className="size-4 text-glacier-400" />
+                <Icon className="size-4 text-accent-400" />
                 {label}
               </li>
             ))}
@@ -212,7 +212,7 @@ export function Hero() {
       >
         <span className="hidden md:inline">Défiler</span>
         <span className="relative h-14 w-px overflow-hidden bg-white/15">
-          <span className="absolute inset-x-0 top-0 h-5 animate-scan bg-gradient-to-b from-transparent via-glacier-300 to-transparent" />
+          <span className="absolute inset-x-0 top-0 h-5 animate-scan bg-gradient-to-b from-transparent via-accent-300 to-transparent" />
         </span>
         <MousePointerClick className="size-3.5 md:hidden" />
       </motion.a>

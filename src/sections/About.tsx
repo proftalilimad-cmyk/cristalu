@@ -131,7 +131,7 @@ export function About() {
             <Reveal y={24} delay={0.2} stagger={0.08} className="mt-10 grid gap-x-8 gap-y-7 sm:grid-cols-2">
               {pillars.map(({ icon: Icon, title, text }) => (
                 <div key={title} className="group">
-                  <span className="flex size-11 items-center justify-center rounded-2xl border border-ink-900/10 bg-white/80 text-ink-800 transition-all duration-500 group-hover:-translate-y-1 group-hover:border-glacier-400/60 group-hover:text-glacier-700">
+                  <span className="flex size-11 items-center justify-center rounded-2xl border border-ink-900/10 bg-white/80 text-ink-800 transition-all duration-500 group-hover:-translate-y-1 group-hover:border-accent-400/60 group-hover:text-accent-700">
                     <Icon className="size-5" strokeWidth={1.6} />
                   </span>
                   <h3 className="mt-4 font-display text-[1rem] tracking-tight text-ink-900">{title}</h3>

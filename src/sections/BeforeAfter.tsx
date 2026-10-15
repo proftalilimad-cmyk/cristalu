@@ -72,7 +72,7 @@ export function BeforeAfter() {
                   className={cn(
                     'rounded-full border px-4 py-2.5 text-[0.8rem] font-medium transition-all duration-500',
                     t.id === activeId
-                      ? 'border-glacier-400/50 bg-white/10 text-alu-100'
+                      ? 'border-accent-400/50 bg-white/10 text-alu-100'
                       : 'border-white/10 text-alu-400 hover:border-white/25 hover:text-alu-200',
                   )}
                 >
@@ -83,7 +83,7 @@ export function BeforeAfter() {
 
             <Reveal y={20} delay={0.2}>
               <p className="mt-8 flex items-start gap-2.5 text-[0.82rem] leading-relaxed text-alu-400/80">
-                <Sparkles className="mt-0.5 size-3.5 shrink-0 text-glacier-400" />
+                <Sparkles className="mt-0.5 size-3.5 shrink-0 text-accent-400" />
                 {active.note}
               </p>
             </Reveal>
@@ -139,7 +139,7 @@ export function BeforeAfter() {
                 <span className="pointer-events-none absolute left-4 top-4 rounded-full border border-white/20 bg-ink-950/60 px-3 py-1.5 text-[0.66rem] uppercase tracking-[0.2em] text-alu-200 backdrop-blur-md">
                   Avant
                 </span>
-                <span className="pointer-events-none absolute right-4 top-4 rounded-full border border-glacier-400/40 bg-ink-950/55 px-3 py-1.5 text-[0.66rem] uppercase tracking-[0.2em] text-glacier-300 backdrop-blur-md">
+                <span className="pointer-events-none absolute right-4 top-4 rounded-full border border-accent-400/40 bg-ink-950/55 px-3 py-1.5 text-[0.66rem] uppercase tracking-[0.2em] text-accent-300 backdrop-blur-md">
                   Après
                 </span>
 
@@ -148,7 +148,7 @@ export function BeforeAfter() {
                   className="pointer-events-none absolute inset-y-0 z-10"
                   style={{ left: `${pos}%`, transform: 'translateX(-50%)' }}
                 >
-                  <div className="h-full w-px bg-white/85 shadow-[0_0_28px_rgba(143,211,232,0.85)]" />
+                  <div className="h-full w-px bg-white/85 shadow-[0_0_28px_rgba(226,73,79,0.85)]" />
                   <div className="absolute left-1/2 top-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-ink-950/70 text-alu-100 backdrop-blur-md">
                     <MoveHorizontal className="size-5" />
                   </div>
@@ -157,7 +157,7 @@ export function BeforeAfter() {
 
               <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/10 px-5 py-4">
                 <p className="text-[0.76rem] text-alu-400/85">{active.before.caption}</p>
-                <p className="text-[0.76rem] text-glacier-300">{active.after.caption}</p>
+                <p className="text-[0.76rem] text-accent-300">{active.after.caption}</p>
               </div>
             </div>
           </Reveal>

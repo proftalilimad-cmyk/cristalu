@@ -47,7 +47,7 @@ export function SegmentedControl<T extends string | number>({
               size === 'sm' ? 'px-3.5 py-2 text-[0.76rem]' : 'px-4 py-2.5 text-[0.83rem]',
               active
                 ? tone === 'dark'
-                  ? 'border-glacier-400/60 text-alu-100'
+                  ? 'border-accent-400/60 text-alu-100'
                   : 'border-ink-900/25 text-ink-900'
                 : tone === 'dark'
                   ? 'border-white/10 text-alu-400 hover:border-white/25 hover:text-alu-200'
@@ -99,7 +99,7 @@ export function SwatchButton({
       className={cn(
         'group flex items-center gap-3 rounded-2xl border p-2 pr-4 text-left transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]',
         active
-          ? 'border-glacier-400/50 bg-white/10 backdrop-blur-md'
+          ? 'border-accent-400/50 bg-white/10 backdrop-blur-md'
           : 'border-white/8 hover:border-white/20 hover:bg-white/5',
       )}
     >
@@ -143,7 +143,7 @@ export function Toggle({
   return (
     <div className="flex items-center justify-between gap-4 rounded-2xl border border-white/8 p-3">
       <span className="flex items-center gap-3">
-        {icon && <span className="text-glacier-400">{icon}</span>}
+        {icon && <span className="text-accent-400">{icon}</span>}
         <span>
           <label htmlFor={id} className="block cursor-pointer text-[0.83rem] font-medium text-alu-100">
             {label}
@@ -160,7 +160,7 @@ export function Toggle({
         onClick={() => onChange(!checked)}
         className={cn(
           'relative h-7 w-12 shrink-0 rounded-full border transition-colors duration-500',
-          checked ? 'border-glacier-400/60 bg-glacier-500/30' : 'border-white/12 bg-white/5',
+          checked ? 'border-accent-400/60 bg-accent-500/30' : 'border-white/12 bg-white/5',
         )}
       >
         <motion.span
@@ -168,7 +168,7 @@ export function Toggle({
           transition={{ type: 'spring', stiffness: 460, damping: 32 }}
           className={cn(
             'absolute top-1/2 size-5 -translate-y-1/2 rounded-full shadow-sm',
-            checked ? 'left-[1.55rem] bg-glacier-300' : 'left-1 bg-alu-400',
+            checked ? 'left-[1.55rem] bg-accent-300' : 'left-1 bg-alu-400',
           )}
         />
       </button>
@@ -223,7 +223,7 @@ export function RangeSlider({
           )}
         />
         <div
-          className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-gradient-to-r from-glacier-500 to-glacier-300"
+          className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-gradient-to-r from-accent-500 to-accent-300"
           style={{ width: `${pct}%` }}
         />
         <input

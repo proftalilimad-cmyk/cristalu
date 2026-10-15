@@ -34,7 +34,7 @@ export function ScrollProgress() {
   return (
     <div className="pointer-events-none fixed inset-x-0 top-0 z-[65] h-[2px]" aria-hidden>
       <div
-        className="h-full origin-left bg-gradient-to-r from-glacier-500 via-glacier-300 to-white/70 transition-transform duration-150"
+        className="h-full origin-left bg-gradient-to-r from-accent-500 via-accent-300 to-white/70 transition-transform duration-150"
         style={{ transform: `scaleX(${progress})` }}
       />
     </div>
@@ -209,7 +209,7 @@ export function BootScreen({ onDone }: { onDone: () => void }) {
             </motion.span>
             <span className="relative h-px w-48 overflow-hidden bg-white/12">
               <motion.span
-                className="absolute inset-y-0 left-0 bg-gradient-to-r from-glacier-500 to-glacier-300"
+                className="absolute inset-y-0 left-0 bg-gradient-to-r from-accent-500 to-accent-300"
                 initial={{ width: '0%' }}
                 animate={{ width: '100%' }}
                 transition={{ duration: 1.15, ease: [0.4, 0, 0.2, 1] }}
@@ -249,7 +249,7 @@ export function ValuesMarquee() {
         {[...items, ...items].map((item, i) => (
           <span key={`${item}-${i}`} className="flex items-center gap-10">
             <span className="text-[0.74rem] uppercase tracking-[0.3em] text-ink-500">{item}</span>
-            <span className="size-1 rotate-45 bg-glacier-400" aria-hidden />
+            <span className="size-1 rotate-45 bg-accent-400" aria-hidden />
           </span>
         ))}
       </div>

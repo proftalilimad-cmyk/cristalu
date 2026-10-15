@@ -11,9 +11,9 @@ export function LogoMark({ className }: { className?: string }) {
           <stop offset="1" stopColor="currentColor" stopOpacity="0.9" />
         </linearGradient>
         <linearGradient id="cristalum-glass" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0" stopColor="#8FD3E8" stopOpacity="0.12" />
-          <stop offset="0.5" stopColor="#DFF1F7" stopOpacity="0.85" />
-          <stop offset="1" stopColor="#8FD3E8" stopOpacity="0.2" />
+          <stop offset="0" stopColor="#F08C91" stopOpacity="0.12" />
+          <stop offset="0.5" stopColor="#FDE8E9" stopOpacity="0.85" />
+          <stop offset="1" stopColor="#F08C91" stopOpacity="0.2" />
         </linearGradient>
       </defs>
       <rect x="3" y="2" width="34" height="36" rx="3" fill="none" stroke="url(#cristalum-metal)" strokeWidth="2" />

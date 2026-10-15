@@ -173,7 +173,7 @@ export function Configurator() {
   return (
     <section id="configurateur" className="relative overflow-hidden bg-ink-950 py-24 text-alu-100 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-zellige opacity-[0.12]" aria-hidden />
-      <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-glacier-500/10 blur-[130px]" aria-hidden />
+      <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-accent-500/10 blur-[130px]" aria-hidden />
 
       <div className="container-x relative">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -209,7 +209,7 @@ export function Configurator() {
               </div>
               <div className="mt-3.5 h-1 w-full overflow-hidden rounded-full bg-white/10">
                 <motion.div
-                  className="h-full rounded-full bg-gradient-to-r from-glacier-500 via-glacier-300 to-glacier-400"
+                  className="h-full rounded-full bg-gradient-to-r from-accent-500 via-accent-300 to-accent-400"
                   animate={{ width: `${((step + 1) / steps.length) * 100}%` }}
                   transition={{ type: 'spring', stiffness: 180, damping: 26 }}
                 />
@@ -244,14 +244,14 @@ export function Configurator() {
                               className={cn(
                                 'group flex flex-col gap-2.5 rounded-2xl border p-4 text-left transition-all duration-500',
                                 active
-                                  ? 'border-glacier-400/60 bg-white/10'
+                                  ? 'border-accent-400/60 bg-white/10'
                                   : 'border-white/8 hover:border-white/22 hover:bg-white/5',
                               )}
                             >
                               <Icon
                                 className={cn(
                                   'size-5 transition-colors',
-                                  active ? 'text-glacier-300' : 'text-alu-400 group-hover:text-alu-200',
+                                  active ? 'text-accent-300' : 'text-alu-400 group-hover:text-alu-200',
                                 )}
                                 strokeWidth={1.6}
                               />
@@ -276,7 +276,7 @@ export function Configurator() {
                               onClick={() => setSel((s) => ({ ...s, material: m }))}
                               className={cn(
                                 'rounded-2xl border p-5 text-left transition-all duration-500',
-                                active ? 'border-glacier-400/60 bg-white/10' : 'border-white/8 hover:border-white/20',
+                                active ? 'border-accent-400/60 bg-white/10' : 'border-white/8 hover:border-white/20',
                                 !allowed && 'cursor-not-allowed opacity-35 hover:border-white/8',
                               )}
                             >
@@ -289,7 +289,7 @@ export function Configurator() {
                                   : 'Excellent rapport isolation/prix, entretien minimal, idéal en rénovation résidentielle.'}
                               </p>
                               {!allowed && (
-                                <p className="mt-2 text-[0.7rem] text-bronze-300">
+                                <p className="mt-2 text-[0.7rem] text-accent-300">
                                   Non proposé pour ce type de produit
                                 </p>
                               )}
@@ -320,7 +320,7 @@ export function Configurator() {
                           suffix=" cm"
                         />
                         <p className="flex items-start gap-2.5 text-[0.78rem] leading-relaxed text-alu-400/80">
-                          <Ruler className="mt-0.5 size-3.5 shrink-0 text-glacier-400" />
+                          <Ruler className="mt-0.5 size-3.5 shrink-0 text-accent-400" />
                           Indiquez des dimensions approximatives : nos équipes réalisent la prise de mesures définitive
                           sur site.
                         </p>
@@ -352,7 +352,7 @@ export function Configurator() {
                             className={cn(
                               'flex items-center gap-3 rounded-2xl border p-3 text-left transition-all duration-500',
                               g.id === sel.glassId
-                                ? 'border-glacier-400/60 bg-white/10'
+                                ? 'border-accent-400/60 bg-white/10'
                                 : 'border-white/8 hover:border-white/20',
                             )}
                           >
@@ -400,7 +400,7 @@ export function Configurator() {
                               className={cn(
                                 'rounded-full border px-4 py-2 text-[0.8rem] transition-all duration-500',
                                 sel.city === c
-                                  ? 'border-glacier-400/60 bg-white/10 text-alu-100'
+                                  ? 'border-accent-400/60 bg-white/10 text-alu-100'
                                   : 'border-white/10 text-alu-400 hover:border-white/25 hover:text-alu-200',
                               )}
                             >
@@ -421,12 +421,12 @@ export function Configurator() {
                             className={cn(
                               'flex items-center justify-between gap-4 rounded-2xl border px-4 py-3.5 text-left text-[0.84rem] transition-all duration-500',
                               sel.installation === opt
-                                ? 'border-glacier-400/60 bg-white/10 text-alu-100'
+                                ? 'border-accent-400/60 bg-white/10 text-alu-100'
                                 : 'border-white/8 text-alu-300 hover:border-white/20',
                             )}
                           >
                             {opt}
-                            {sel.installation === opt && <Check className="size-4 shrink-0 text-glacier-300" />}
+                            {sel.installation === opt && <Check className="size-4 shrink-0 text-accent-300" />}
                           </button>
                         ))}
                       </div>
@@ -458,7 +458,7 @@ export function Configurator() {
                     Suivant
                   </Button>
                 ) : (
-                  <span className="text-[0.75rem] text-glacier-300">Complétez ci-dessous pour recevoir votre devis</span>
+                  <span className="text-[0.75rem] text-accent-300">Complétez ci-dessous pour recevoir votre devis</span>
                 )}
               </div>
             </div>
@@ -468,7 +468,7 @@ export function Configurator() {
               {!outcome ? (
                 <>
                   <div className="flex items-center gap-3">
-                    <ClipboardList className="size-4.5 text-glacier-400" />
+                    <ClipboardList className="size-4.5 text-accent-400" />
                     <p className="font-display text-[1rem] tracking-tight text-alu-100">Recevoir mon devis personnalisé</p>
                   </div>
 
@@ -514,7 +514,7 @@ export function Configurator() {
                   </div>
 
                   {!canSend && (
-                    <p className="mt-4 text-[0.74rem] text-bronze-300/90">
+                    <p className="mt-4 text-[0.74rem] text-accent-300/90">
                       Renseignez votre nom, votre téléphone et votre ville pour envoyer la demande.
                     </p>
                   )}
@@ -531,21 +531,21 @@ export function Configurator() {
                     {sending ? 'Envoi en cours…' : 'Recevoir mon devis personnalisé'}
                   </Button>
                   <p className="mt-3.5 flex items-start gap-2 text-[0.72rem] leading-relaxed text-alu-400/70">
-                    <Sparkles className="mt-0.5 size-3.5 shrink-0 text-glacier-400" />
+                    <Sparkles className="mt-0.5 size-3.5 shrink-0 text-accent-400" />
                     Aucun prix n’est affiché automatiquement : votre demande est transmise à notre équipe, qui revient
                     vers vous avec une proposition adaptée.
                   </p>
                 </>
               ) : (
                 <div className="py-2">
-                  <span className="flex size-12 items-center justify-center rounded-2xl border border-glacier-400/40 bg-glacier-500/10 text-glacier-300">
+                  <span className="flex size-12 items-center justify-center rounded-2xl border border-accent-400/40 bg-accent-500/10 text-accent-300">
                     <BadgeCheck className="size-6" />
                   </span>
                   <p className="mt-5 font-display text-[1.15rem] leading-snug tracking-tight text-alu-100">
                     {outcome.message}
                   </p>
                   <p className="mt-3 text-[0.82rem] text-alu-400">
-                    Référence de votre demande : <span className="text-glacier-300">{outcome.reference}</span>
+                    Référence de votre demande : <span className="text-accent-300">{outcome.reference}</span>
                   </p>
 
                   <div className="mt-5 rounded-2xl border border-white/10 bg-ink-900/60 p-4">
@@ -682,7 +682,7 @@ function Field({
         autoComplete={autoComplete}
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
-        className="rounded-xl border border-white/12 bg-white/[0.04] px-3.5 py-3 text-[0.86rem] text-alu-100 outline-none transition-colors placeholder:text-alu-500/60 focus:border-glacier-400/60 focus:bg-white/[0.07]"
+        className="rounded-xl border border-white/12 bg-white/[0.04] px-3.5 py-3 text-[0.86rem] text-alu-100 outline-none transition-colors placeholder:text-alu-500/60 focus:border-accent-400/60 focus:bg-white/[0.07]"
       />
     </label>
   )

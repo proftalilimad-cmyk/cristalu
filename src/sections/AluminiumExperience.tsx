@@ -131,8 +131,8 @@ export function AluminiumExperience() {
   return (
     <section id="experience-3d" className="relative overflow-hidden bg-ink-950 py-24 text-alu-100 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-zellige opacity-[0.14]" aria-hidden />
-      <div className="pointer-events-none absolute -left-40 top-1/4 size-[36rem] rounded-full bg-glacier-500/10 blur-[140px]" aria-hidden />
-      <div className="pointer-events-none absolute -right-32 bottom-0 size-[30rem] rounded-full bg-bronze-400/8 blur-[130px]" aria-hidden />
+      <div className="pointer-events-none absolute -left-40 top-1/4 size-[36rem] rounded-full bg-accent-500/10 blur-[140px]" aria-hidden />
+      <div className="pointer-events-none absolute -right-32 bottom-0 size-[30rem] rounded-full bg-accent-500/10 blur-[130px]" aria-hidden />
 
       <div className="container-x relative">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -210,7 +210,7 @@ export function AluminiumExperience() {
               {!isTouch && (
                 <div className="pointer-events-none absolute bottom-5 left-1/2 -translate-x-1/2">
                   <span className="glass-pane flex items-center gap-2 rounded-full px-4 py-2 text-[0.7rem] text-alu-300">
-                    <MoveHorizontal className="size-3.5 text-glacier-400" />
+                    <MoveHorizontal className="size-3.5 text-accent-400" />
                     Glissez pour tourner · molette pour zoomer
                   </span>
                 </div>
@@ -224,7 +224,7 @@ export function AluminiumExperience() {
                   className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-ink-950/35 backdrop-blur-[2px] transition-colors hover:bg-ink-950/25"
                 >
                   <span className="glass-pane flex items-center gap-2.5 rounded-full px-5 py-3 text-[0.82rem] font-medium text-alu-100">
-                    <BoxIcon className="size-4 text-glacier-400" />
+                    <BoxIcon className="size-4 text-accent-400" />
                     Toucher pour explorer en 3D
                   </span>
                   <span className="text-[0.68rem] uppercase tracking-[0.24em] text-alu-400/80">
@@ -244,7 +244,7 @@ export function AluminiumExperience() {
             </div>
 
             <p className="mt-4 flex items-start gap-2 text-[0.78rem] leading-relaxed text-alu-400/80">
-              <Sparkles className="mt-0.5 size-3.5 shrink-0 text-glacier-400" />
+              <Sparkles className="mt-0.5 size-3.5 shrink-0 text-accent-400" />
               {showcase.hint}
             </p>
           </Reveal>
@@ -299,7 +299,7 @@ export function AluminiumExperience() {
                     className={cn(
                       'group flex flex-col gap-2 rounded-2xl border p-3 text-left transition-all duration-500',
                       g.id === glassId
-                        ? 'border-glacier-400/50 bg-white/10'
+                        ? 'border-accent-400/50 bg-white/10'
                         : 'border-white/8 hover:border-white/20 hover:bg-white/5',
                     )}
                   >

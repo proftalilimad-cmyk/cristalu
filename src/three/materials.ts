@@ -72,9 +72,9 @@ export function makeGlowTexture() {
   const ctx = canvas.getContext('2d')!
   const g = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2)
   g.addColorStop(0, 'rgba(255,255,255,1)')
-  g.addColorStop(0.25, 'rgba(223,241,247,0.85)')
-  g.addColorStop(0.6, 'rgba(143,211,232,0.25)')
-  g.addColorStop(1, 'rgba(143,211,232,0)')
+  g.addColorStop(0.25, 'rgba(253,232,233,0.85)')
+  g.addColorStop(0.6, 'rgba(226,73,79,0.25)')
+  g.addColorStop(1, 'rgba(226,73,79,0)')
   ctx.fillStyle = g
   ctx.fillRect(0, 0, size, size)
   const tex = new THREE.CanvasTexture(canvas)

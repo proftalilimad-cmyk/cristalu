@@ -13,13 +13,13 @@ function StepCard({
   icon: Icon,
 }: (typeof processSteps)[number]) {
   return (
-    <article className="group relative flex h-full w-[80vw] max-w-[22rem] shrink-0 flex-col justify-between rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-7 backdrop-blur-xl transition-[border-color,transform,background-color] duration-700 hover:-translate-y-1.5 hover:border-glacier-400/40 hover:bg-white/[0.06] sm:w-[26rem]">
+    <article className="group relative flex h-full w-[80vw] max-w-[22rem] shrink-0 flex-col justify-between rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-7 backdrop-blur-xl transition-[border-color,transform,background-color] duration-700 hover:-translate-y-1.5 hover:border-accent-400/40 hover:bg-white/[0.06] sm:w-[26rem]">
       <div>
         <div className="flex items-start justify-between">
-          <span className="font-display text-[2.4rem] leading-none tracking-tight text-alu-500/40 transition-colors duration-700 group-hover:text-glacier-400/70">
+          <span className="font-display text-[2.4rem] leading-none tracking-tight text-alu-500/40 transition-colors duration-700 group-hover:text-accent-400/70">
             {index}
           </span>
-          <span className="flex size-12 items-center justify-center rounded-2xl border border-white/12 bg-ink-950/40 text-glacier-300 transition-transform duration-700 group-hover:scale-105 group-hover:rotate-[4deg]">
+          <span className="flex size-12 items-center justify-center rounded-2xl border border-white/12 bg-ink-950/40 text-accent-300 transition-transform duration-700 group-hover:scale-105 group-hover:rotate-[4deg]">
             <Icon className="size-5.5" strokeWidth={1.6} />
           </span>
         </div>
@@ -126,7 +126,7 @@ export function Process() {
           <div className="mt-10 hidden h-px w-full overflow-hidden bg-white/10 lg:block">
             <div
               ref={progress}
-              className="h-full w-full origin-left scale-x-0 bg-gradient-to-r from-glacier-500 via-glacier-300 to-glacier-400"
+              className="h-full w-full origin-left scale-x-0 bg-gradient-to-r from-accent-500 via-accent-300 to-accent-400"
             />
           </div>
         </div>
@@ -139,7 +139,7 @@ export function Process() {
                 <StepCard {...step} />
                 {i < processSteps.length - 1 && (
                   <span className="absolute -right-6 top-1/2 flex h-px w-6 -translate-y-1/2 items-center bg-gradient-to-r from-white/25 to-transparent">
-                    <span className="absolute right-0 size-1.5 -translate-y-1/2 rounded-full bg-glacier-400/80" />
+                    <span className="absolute right-0 size-1.5 -translate-y-1/2 rounded-full bg-accent-400/80" />
                   </span>
                 )}
               </div>
@@ -159,12 +159,12 @@ export function Process() {
           {processSteps.map((step, i) => (
             <div key={step.index} data-step-card className="relative pl-12">
               <span className="absolute left-[1.35rem] top-0 h-full w-px bg-gradient-to-b from-white/25 via-white/10 to-transparent" />
-              <span className="absolute left-0 top-1 flex size-11 items-center justify-center rounded-2xl border border-white/12 bg-ink-950 text-glacier-300">
+              <span className="absolute left-0 top-1 flex size-11 items-center justify-center rounded-2xl border border-white/12 bg-ink-950 text-accent-300">
                 <step.icon className="size-5" strokeWidth={1.6} />
               </span>
               <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5 backdrop-blur-xl">
                 <div className="flex items-baseline gap-3">
-                  <span className="font-display text-[0.8rem] tracking-[0.2em] text-glacier-400">
+                  <span className="font-display text-[0.8rem] tracking-[0.2em] text-accent-400">
                     {step.index}
                   </span>
                   <h3 className="font-display text-[1.1rem] tracking-tight text-alu-100">{step.title}</h3>

@@ -141,12 +141,12 @@ export function ProjectViewer({
 
         <div ref={lines} className="mt-7 grid gap-7 md:grid-cols-[1.3fr_1fr] md:gap-12">
           <div>
-            <p className="text-[0.66rem] uppercase tracking-[0.26em] text-glacier-400">Description</p>
+            <p className="text-[0.66rem] uppercase tracking-[0.26em] text-accent-400">Description</p>
             <p className="mt-3 text-[0.95rem] leading-relaxed text-alu-300">{project.description}</p>
           </div>
           <dl className="grid gap-5">
             <div className="flex items-start gap-3">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-glacier-400" />
+              <MapPin className="mt-0.5 size-4 shrink-0 text-accent-400" />
               <div>
                 <dt className="text-[0.66rem] uppercase tracking-[0.24em] text-alu-400/80">Localisation</dt>
                 <dd className="mt-1 text-[0.9rem] text-alu-200">
@@ -155,7 +155,7 @@ export function ProjectViewer({
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <Ruler className="mt-0.5 size-4 shrink-0 text-glacier-400" />
+              <Ruler className="mt-0.5 size-4 shrink-0 text-accent-400" />
               <div>
                 <dt className="text-[0.66rem] uppercase tracking-[0.24em] text-alu-400/80">Matériaux</dt>
                 <dd className="mt-1 flex flex-wrap gap-1.5">

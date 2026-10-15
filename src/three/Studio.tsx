@@ -38,7 +38,7 @@ export function StudioEnvironment({ resolution = 256 }: { resolution?: number })
       <Lightformer
         form="rect"
         intensity={2.4}
-        color="#bfd9e4"
+        color="#f2dcde"
         position={[4.4, 1.4, -2.6]}
         rotation={[0, -Math.PI / 4, 0]}
         scale={[7, 5, 1]}
@@ -48,23 +48,23 @@ export function StudioEnvironment({ resolution = 256 }: { resolution?: number })
       <Lightformer
         form="rect"
         intensity={3}
-        color="#e8f4f8"
+        color="#f7f2f2"
         position={[0, 5.5, 1.2]}
         rotation={[-Math.PI / 2, 0, 0]}
         scale={[12, 5, 1]}
         target={[0, 0, 0]}
       />
-      {/* Rinçage chaud bas — écho méditerranéen */}
+      {/* Rinçage bas — écho rouge CRISTALUM */}
       <Lightformer
         form="rect"
         intensity={0.85}
-        color="#e9c9a3"
+        color="#e8b4b7"
         position={[1.5, -3.4, 0.8]}
         rotation={[Math.PI / 2.6, 0, 0]}
         scale={[9, 4, 1]}
         target={[0, 0, 0]}
       />
-      <Lightformer form="circle" intensity={1.6} color="#8fd3e8" position={[-3, -1.4, 3]} scale={[2.6, 2.6, 1]} />
+      <Lightformer form="circle" intensity={1.6} color="#f08c91" position={[-3, -1.4, 3]} scale={[2.6, 2.6, 1]} />
     </Environment>
   )
 }
@@ -105,11 +105,11 @@ export function LightRig({
 
   return (
     <>
-      <ambientLight intensity={0.42} color="#dbe7ee" />
-      <hemisphereLight args={['#dff1f7', '#22282e', 0.5]} />
+      <ambientLight intensity={0.42} color="#e9e6e8" />
+      <hemisphereLight args={['#fde8e9', '#22282e', 0.5]} />
       <directionalLight ref={key} position={[-4, 3.4, 3.4]} intensity={1.5} color="#ffffff" />
-      <directionalLight ref={warm} position={[3.4, 1.2, 2.2]} intensity={0.55} color="#f3d9b6" />
-      {lightSweep && <pointLight ref={rim} position={[-1.6, 0.6, 2.4]} intensity={3} color="#8fd3e8" distance={14} decay={2} />}
+      <directionalLight ref={warm} position={[3.4, 1.2, 2.2]} intensity={0.55} color="#f4e3e3" />
+      {lightSweep && <pointLight ref={rim} position={[-1.6, 0.6, 2.4]} intensity={3} color="#f08c91" distance={14} decay={2} />}
     </>
   )
 }
@@ -175,7 +175,7 @@ export function GlassDust({
         opacity={0.3}
         depthWrite={false}
         blending={THREE.AdditiveBlending}
-        color="#dff1f7"
+        color="#fde8e9"
       />
     </points>
   )
@@ -235,7 +235,7 @@ export function LightSweep({ width = 6, height = 2.6 }: { width?: number; height
         opacity={0.2}
         depthWrite={false}
         blending={THREE.AdditiveBlending}
-        color="#eaf7fb"
+        color="#fdeeee"
       />
     </mesh>
   )

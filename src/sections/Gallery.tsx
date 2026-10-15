@@ -47,7 +47,7 @@ export function Gallery() {
           </div>
           <Reveal y={18} delay={0.08}>
             <p className="flex items-start gap-2.5 text-[0.86rem] leading-relaxed text-ink-500 lg:max-w-xs">
-              <LayoutGrid className="mt-0.5 size-4 shrink-0 text-glacier-600" />
+              <LayoutGrid className="mt-0.5 size-4 shrink-0 text-accent-600" />
               Sélectionnez une famille de solutions puis ouvrez un projet pour voir le détail technique.
             </p>
           </Reveal>
@@ -102,7 +102,7 @@ export function Gallery() {
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/15 to-transparent opacity-90 transition-opacity duration-700 group-hover:opacity-100" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 p-5">
-                  <span className="text-[0.64rem] uppercase tracking-[0.24em] text-glacier-300">{project.category}</span>
+                  <span className="text-[0.64rem] uppercase tracking-[0.24em] text-accent-300">{project.category}</span>
                   <h3 className="mt-2 font-display text-[1.05rem] leading-snug tracking-tight text-alu-100">
                     {project.title}
                   </h3>
@@ -110,7 +110,7 @@ export function Gallery() {
                     Voir le projet <ArrowUpRight className="size-3.5" />
                   </span>
                 </div>
-                <span className="absolute right-4 top-4 flex size-9 translate-y-2 items-center justify-center rounded-full border border-white/25 bg-ink-950/45 text-glacier-300 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                <span className="absolute right-4 top-4 flex size-9 translate-y-2 items-center justify-center rounded-full border border-white/25 bg-ink-950/45 text-accent-300 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                   <ArrowUpRight className="size-4" />
                 </span>
               </button>

@@ -45,12 +45,12 @@ function ServiceCard({ service, onOpen }: { service: Service; onOpen: () => void
   const Icon = service.icon
   return (
     <TiltCard className="h-full">
-      <article className="relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-ink-900/8 bg-white/80 shadow-[0_30px_70px_-60px_rgba(6,8,10,0.6)] backdrop-blur-md transition-[transform,box-shadow,border-color] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-glacier-400/40 group-hover:shadow-[0_50px_90px_-60px_rgba(6,8,10,0.75)] [transform-style:preserve-3d]">
+      <article className="relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-ink-900/8 bg-white/80 shadow-[0_30px_70px_-60px_rgba(6,8,10,0.6)] backdrop-blur-md transition-[transform,box-shadow,border-color] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:border-accent-400/40 group-hover:shadow-[0_50px_90px_-60px_rgba(6,8,10,0.75)] [transform-style:preserve-3d]">
         <div
           className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
           style={{
             background:
-              'radial-gradient(340px circle at var(--mx,50%) var(--my,50%), rgba(143,211,232,0.18), transparent 60%)',
+              'radial-gradient(340px circle at var(--mx,50%) var(--my,50%), rgba(226,73,79,0.18), transparent 60%)',
           }}
           aria-hidden
         />
@@ -66,7 +66,7 @@ function ServiceCard({ service, onOpen }: { service: Service; onOpen: () => void
           <span className="absolute left-4 top-4 glass-pane rounded-full px-2.5 py-1 font-display text-[0.68rem] tracking-[0.2em] text-alu-100">
             {service.index}
           </span>
-          <span className="absolute bottom-4 left-4 flex size-11 items-center justify-center rounded-2xl border border-white/20 bg-ink-950/45 text-glacier-300 backdrop-blur-md transition-transform duration-700 group-hover:-translate-y-1">
+          <span className="absolute bottom-4 left-4 flex size-11 items-center justify-center rounded-2xl border border-white/20 bg-ink-950/45 text-accent-300 backdrop-blur-md transition-transform duration-700 group-hover:-translate-y-1">
             <Icon className="size-5" strokeWidth={1.6} />
           </span>
         </div>
@@ -87,7 +87,7 @@ function ServiceCard({ service, onOpen }: { service: Service; onOpen: () => void
           <button
             type="button"
             onClick={onOpen}
-            className="group/btn mt-6 inline-flex items-center gap-2 self-start text-[0.82rem] font-medium text-ink-800 transition-colors hover:text-glacier-700"
+            className="group/btn mt-6 inline-flex items-center gap-2 self-start text-[0.82rem] font-medium text-ink-800 transition-colors hover:text-accent-700"
           >
             En savoir plus
             <ArrowRight className="size-3.5 transition-transform duration-500 group-hover/btn:translate-x-1" />
@@ -142,12 +142,12 @@ function ServiceDrawer({ service, onClose }: { service: Service | null; onClose:
               </button>
               <div className="absolute bottom-5 left-6 flex items-center gap-3">
                 {Icon && (
-                  <span className="flex size-11 items-center justify-center rounded-2xl border border-white/15 bg-ink-950/50 text-glacier-300 backdrop-blur-md">
+                  <span className="flex size-11 items-center justify-center rounded-2xl border border-white/15 bg-ink-950/50 text-accent-300 backdrop-blur-md">
                     <Icon className="size-5" strokeWidth={1.6} />
                   </span>
                 )}
                 <div>
-                  <p className="text-[0.66rem] uppercase tracking-[0.26em] text-glacier-400">
+                  <p className="text-[0.66rem] uppercase tracking-[0.26em] text-accent-400">
                     Solution {service.index}
                   </p>
                   <h3 className="font-display text-[1.5rem] tracking-tight">{service.title}</h3>
@@ -163,7 +163,7 @@ function ServiceDrawer({ service, onClose }: { service: Service | null; onClose:
                 <ul className="mt-3.5 grid gap-2.5">
                   {service.features.map((f) => (
                     <li key={f} className="flex items-start gap-3 text-[0.88rem] text-alu-200">
-                      <Check className="mt-0.5 size-4 shrink-0 text-glacier-400" />
+                      <Check className="mt-0.5 size-4 shrink-0 text-accent-400" />
                       {f}
                     </li>
                   ))}
@@ -243,9 +243,9 @@ export function Services() {
           <Reveal y={34} delay={0.12} className="h-full">
             <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[1.75rem] border border-ink-900/10 bg-ink-900 p-7 text-alu-100">
               <div className="pointer-events-none absolute inset-0 bg-zellige opacity-[0.18]" aria-hidden />
-              <div className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-glacier-500/20 blur-[70px]" aria-hidden />
+              <div className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-accent-500/20 blur-[70px]" aria-hidden />
               <div className="relative">
-                <p className="text-[0.66rem] uppercase tracking-[0.28em] text-glacier-400">Sur mesure</p>
+                <p className="text-[0.66rem] uppercase tracking-[0.28em] text-accent-400">Sur mesure</p>
                 <h3 className="mt-4 font-display text-[1.4rem] leading-snug tracking-tight">
                   Un projet hors standard ? C’est notre terrain de jeu.
                 </h3>

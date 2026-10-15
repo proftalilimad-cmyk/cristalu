@@ -25,7 +25,7 @@ export function Eyebrow({
         <span
           className={cn(
             'font-display text-[0.7rem] tracking-[0.2em]',
-            tone === 'light' ? 'text-glacier-600' : 'text-glacier-400',
+            tone === 'light' ? 'text-accent-600' : 'text-accent-400',
           )}
         >
           {index}

@@ -120,7 +120,7 @@ export function Quote() {
   return (
     <section id="contact" className="relative overflow-hidden bg-ink-900 py-24 text-alu-100 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-hatch opacity-25" aria-hidden />
-      <div className="pointer-events-none absolute -left-24 top-10 size-[26rem] rounded-full bg-glacier-500/10 blur-[120px]" aria-hidden />
+      <div className="pointer-events-none absolute -left-24 top-10 size-[26rem] rounded-full bg-accent-500/10 blur-[120px]" aria-hidden />
 
       <div className="container-x relative">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
@@ -148,7 +148,7 @@ export function Quote() {
                   key={label}
                   className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.035] p-4 backdrop-blur-xl"
                 >
-                  <Icon className="mt-0.5 size-4.5 shrink-0 text-glacier-400" strokeWidth={1.6} />
+                  <Icon className="mt-0.5 size-4.5 shrink-0 text-accent-400" strokeWidth={1.6} />
                   <div className="min-w-0">
                     <p className="text-[0.68rem] uppercase tracking-[0.22em] text-alu-400/80">{label}</p>
                     {value ? (
@@ -157,7 +157,7 @@ export function Quote() {
                           href={href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-1 block truncate text-[0.9rem] text-alu-100 underline decoration-glacier-400/40 underline-offset-4 transition-colors hover:text-glacier-300"
+                          className="mt-1 block truncate text-[0.9rem] text-alu-100 underline decoration-accent-400/40 underline-offset-4 transition-colors hover:text-accent-300"
                         >
                           {value}
                         </a>
@@ -166,7 +166,7 @@ export function Quote() {
                       )
                     ) : (
                       <p className="mt-1 flex items-center gap-2 text-[0.82rem] text-alu-400/80">
-                        <AlertTriangle className="size-3.5 text-bronze-300" />
+                        <AlertTriangle className="size-3.5 text-accent-300" />
                         À renseigner dans{' '}
                         <code className="rounded bg-white/5 px-1 py-0.5 text-[0.72rem]">src/data/site.ts</code>
                       </p>
@@ -205,7 +205,7 @@ export function Quote() {
 
             <Reveal y={20} delay={0.24}>
               <p className="mt-7 flex items-start gap-2.5 text-[0.74rem] leading-relaxed text-alu-400/70">
-                <Sparkles className="mt-0.5 size-3.5 shrink-0 text-glacier-400" />
+                <Sparkles className="mt-0.5 size-3.5 shrink-0 text-accent-400" />
                 Vos informations ne servent qu’au traitement de votre demande. Voir la politique de confidentialité en
                 pied de page.
               </p>
@@ -266,7 +266,7 @@ export function Quote() {
                           setCity(cityByName(e.target.value, cities))
                         }}
                         className={cn(
-                          'rounded-xl border border-white/12 bg-white/[0.04] px-3.5 py-3 text-[0.88rem] text-alu-100 outline-none transition-colors focus:border-glacier-400/60 focus:bg-white/[0.07]',
+                          'rounded-xl border border-white/12 bg-white/[0.04] px-3.5 py-3 text-[0.88rem] text-alu-100 outline-none transition-colors focus:border-accent-400/60 focus:bg-white/[0.07]',
                           !form.city && 'text-alu-500',
                         )}
                       >
@@ -277,7 +277,7 @@ export function Quote() {
                           </option>
                         ))}
                       </select>
-                      {errors.city && <span className="text-[0.72rem] text-bronze-300">{errors.city}</span>}
+                      {errors.city && <span className="text-[0.72rem] text-accent-300">{errors.city}</span>}
                     </label>
                   </div>
 
@@ -289,7 +289,7 @@ export function Quote() {
                       <select
                         value={form.projectType}
                         onChange={(e) => set('projectType', e.target.value)}
-                        className="rounded-xl border border-white/12 bg-white/[0.04] px-3.5 py-3 text-[0.88rem] text-alu-100 outline-none transition-colors focus:border-glacier-400/60 focus:bg-white/[0.07]"
+                        className="rounded-xl border border-white/12 bg-white/[0.04] px-3.5 py-3 text-[0.88rem] text-alu-100 outline-none transition-colors focus:border-accent-400/60 focus:bg-white/[0.07]"
                       >
                         {projectTypes.map((t) => (
                           <option key={t} value={t} className="bg-ink-900 text-alu-100">
@@ -310,7 +310,7 @@ export function Quote() {
                             className={cn(
                               'rounded-full border px-3.5 py-2 text-[0.76rem] transition-all duration-500',
                               form.material === m
-                                ? 'border-glacier-400/60 bg-white/10 text-alu-100'
+                                ? 'border-accent-400/60 bg-white/10 text-alu-100'
                                 : 'border-white/10 text-alu-400 hover:border-white/25 hover:text-alu-200',
                             )}
                           >
@@ -338,7 +338,7 @@ export function Quote() {
                       onChange={(e) => set('message', e.target.value)}
                       rows={4}
                       placeholder="Décrivez votre projet, vos contraintes, votre calendrier…"
-                      className="resize-none rounded-xl border border-white/12 bg-white/[0.04] px-3.5 py-3 text-[0.88rem] text-alu-100 outline-none transition-colors placeholder:text-alu-500/60 focus:border-glacier-400/60 focus:bg-white/[0.07]"
+                      className="resize-none rounded-xl border border-white/12 bg-white/[0.04] px-3.5 py-3 text-[0.88rem] text-alu-100 outline-none transition-colors placeholder:text-alu-500/60 focus:border-accent-400/60 focus:bg-white/[0.07]"
                     />
                   </label>
 
@@ -346,7 +346,7 @@ export function Quote() {
                   <div className="rounded-2xl border border-dashed border-white/15 p-4">
                     <div className="flex flex-wrap items-center justify-between gap-3">
                       <span className="flex items-center gap-2.5 text-[0.8rem] text-alu-300">
-                        <ImagePlus className="size-4 text-glacier-400" />
+                        <ImagePlus className="size-4 text-accent-400" />
                         Photos ou plans (facultatif)
                       </span>
                       <Button
@@ -381,7 +381,7 @@ export function Quote() {
                               type="button"
                               aria-label={`Retirer ${f.name}`}
                               onClick={() => setFiles((list) => list.filter((x) => x.name !== f.name))}
-                              className="text-alu-500 transition-colors hover:text-bronze-300"
+                              className="text-alu-500 transition-colors hover:text-accent-300"
                             >
                               <Trash2 className="size-3.5" />
                             </button>
@@ -408,21 +408,21 @@ export function Quote() {
                   </Button>
 
                   {!valid && (
-                    <p className="text-[0.75rem] text-bronze-300/90">
+                    <p className="text-[0.75rem] text-accent-300/90">
                       Complétez les champs obligatoires : nom, téléphone et ville.
                     </p>
                   )}
                 </form>
               ) : (
                 <div className="py-4">
-                  <span className="flex size-14 items-center justify-center rounded-2xl border border-glacier-400/40 bg-glacier-500/10 text-glacier-300">
+                  <span className="flex size-14 items-center justify-center rounded-2xl border border-accent-400/40 bg-accent-500/10 text-accent-300">
                     <BadgeCheck className="size-7" />
                   </span>
                   <p className="mt-6 font-display text-[1.3rem] leading-snug tracking-tight text-alu-100">
                     {outcome.message}
                   </p>
                   <p className="mt-3 text-[0.85rem] text-alu-400">
-                    Référence : <span className="text-glacier-300">{outcome.reference}</span> · Ville : {form.city}
+                    Référence : <span className="text-accent-300">{outcome.reference}</span> · Ville : {form.city}
                   </p>
 
                   <div className="mt-6 rounded-2xl border border-white/10 bg-ink-950/60 p-4">
@@ -516,10 +516,10 @@ function Field({
         aria-invalid={Boolean(error)}
         className={cn(
           'rounded-xl border bg-white/[0.04] px-3.5 py-3 text-[0.88rem] text-alu-100 outline-none transition-colors placeholder:text-alu-500/60 focus:bg-white/[0.07]',
-          error ? 'border-bronze-400/60' : 'border-white/12 focus:border-glacier-400/60',
+          error ? 'border-accent-400/60' : 'border-white/12 focus:border-accent-400/60',
         )}
       />
-      {error && <span className="text-[0.72rem] text-bronze-300">{error}</span>}
+      {error && <span className="text-[0.72rem] text-accent-300">{error}</span>}
     </label>
   )
 }

@@ -37,7 +37,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-ink-950 pt-20 text-alu-300">
       <div className="pointer-events-none absolute inset-0 bg-zellige opacity-[0.1]" aria-hidden />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-glacier-400/40 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-400/40 to-transparent" />
 
       <div className="container-x relative">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1.1fr]">
@@ -130,7 +130,7 @@ export function Footer() {
             <p className="text-[0.68rem] uppercase tracking-[0.26em] text-alu-500">Contact</p>
             <ul className="mt-5 grid gap-3.5 text-[0.88rem]">
               <li className="flex items-start gap-3">
-                <Phone className="mt-0.5 size-4 shrink-0 text-glacier-400" />
+                <Phone className="mt-0.5 size-4 shrink-0 text-accent-400" />
                 {phone ? (
                   <a href={`tel:${phone.replace(/\s/g, '')}`} className="transition-colors hover:text-alu-100">
                     {phone}
@@ -140,7 +140,7 @@ export function Footer() {
                 )}
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="mt-0.5 size-4 shrink-0 text-glacier-400" />
+                <Mail className="mt-0.5 size-4 shrink-0 text-accent-400" />
                 {email ? (
                   <a href={`mailto:${email}`} className="break-all transition-colors hover:text-alu-100">
                     {email}
@@ -150,7 +150,7 @@ export function Footer() {
                 )}
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 size-4 shrink-0 text-glacier-400" />
+                <MapPin className="mt-0.5 size-4 shrink-0 text-accent-400" />
                 {address.length > 0 ? (
                   maps ? (
                     <a
@@ -170,13 +170,13 @@ export function Footer() {
               </li>
               {hours && (
                 <li className="flex items-start gap-3">
-                  <Globe className="mt-0.5 size-4 shrink-0 text-glacier-400" />
+                  <Globe className="mt-0.5 size-4 shrink-0 text-accent-400" />
                   <span>{hours}</span>
                 </li>
               )}
               {hasWhatsApp() && (
                 <li className="flex items-start gap-3">
-                  <MessageCircle className="mt-0.5 size-4 shrink-0 text-glacier-400" />
+                  <MessageCircle className="mt-0.5 size-4 shrink-0 text-accent-400" />
                   <a
                     href={whatsappLink() ?? '#'}
                     target="_blank"
@@ -194,10 +194,10 @@ export function Footer() {
                 href={maps}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group mt-5 flex items-center justify-between gap-3 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 text-[0.8rem] text-alu-300 transition-colors hover:border-glacier-400/40 hover:text-alu-100"
+                className="group mt-5 flex items-center justify-between gap-3 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 text-[0.8rem] text-alu-300 transition-colors hover:border-accent-400/40 hover:text-alu-100"
               >
                 <span className="flex items-center gap-2.5">
-                  <Navigation className="size-4 text-glacier-400" />
+                  <Navigation className="size-4 text-accent-400" />
                   Voir sur Google Maps
                 </span>
                 <ArrowUpRight className="size-3.5 transition-transform duration-500 group-hover:translate-x-0.5" />

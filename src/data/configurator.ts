@@ -98,7 +98,7 @@ export const glassTypes: GlassType[] = [
   {
     id: 'transparent',
     label: 'Transparent',
-    tint: '#eaf7fb',
+    tint: '#eef1f3',
     transmission: 0.98,
     roughness: 0.02,
     opacity: 0.16,
@@ -120,7 +120,7 @@ export const glassTypes: GlassType[] = [
   {
     id: 'reflechissant',
     label: 'Réfléchissant',
-    tint: '#b9cfd9',
+    tint: '#c7ced2',
     transmission: 0.32,
     roughness: 0.015,
     opacity: 0.5,
@@ -131,7 +131,7 @@ export const glassTypes: GlassType[] = [
   {
     id: 'double',
     label: 'Double vitrage',
-    tint: '#dff0f6',
+    tint: '#e8ecee',
     transmission: 0.86,
     roughness: 0.03,
     opacity: 0.2,

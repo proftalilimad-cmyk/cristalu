@@ -130,7 +130,7 @@ export function Architecture() {
                   <ul className="mt-5 grid gap-1.5">
                     {t.points.map((p) => (
                       <li key={p} className="flex items-center gap-2 text-[0.78rem] text-alu-300/75">
-                        <span className="size-1 rounded-full bg-glacier-400" />
+                        <span className="size-1 rounded-full bg-accent-400" />
                         {p}
                       </li>
                     ))}
@@ -148,7 +148,7 @@ export function Architecture() {
                 key={label}
                 className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.035] p-5 backdrop-blur-xl"
               >
-                <Icon className="mt-0.5 size-5 shrink-0 text-glacier-400" strokeWidth={1.6} />
+                <Icon className="mt-0.5 size-5 shrink-0 text-accent-400" strokeWidth={1.6} />
                 <div>
                   <p className="text-[0.88rem] font-medium text-alu-100">{label}</p>
                   <p className="mt-1.5 text-[0.8rem] leading-relaxed text-alu-400/80">{text}</p>
@@ -167,7 +167,7 @@ export function Architecture() {
                 key={label}
                 className="flex items-center gap-2.5 rounded-full border border-white/10 px-4 py-2 text-[0.78rem] text-alu-300"
               >
-                <Icon className="size-4 text-glacier-400" strokeWidth={1.6} />
+                <Icon className="size-4 text-accent-400" strokeWidth={1.6} />
                 {label}
               </span>
             ))}

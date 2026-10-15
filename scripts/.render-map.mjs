@@ -30,7 +30,7 @@ const dots = cities
     const [x, y] = CITY_XY[city.id]
     const a = labelAnchor(city.label, x, y)
     return `
-  <circle cx="${x}" cy="${y}" r="11" fill="#2d6c85" stroke="#fff" stroke-width="4"/>
+  <circle cx="${x}" cy="${y}" r="11" fill="#c8102e" stroke="#fff" stroke-width="4"/>
   <text x="${a.x}" y="${a.y}" font-size="${FONT}" font-family="DejaVu Sans, sans-serif" text-anchor="${a.anchor}" fill="#0b0d10">${city.name}</text>`
   })
   .join('')

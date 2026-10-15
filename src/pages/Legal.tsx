@@ -5,7 +5,7 @@ import { Logo } from '@/components/layout/Logo'
 import { Footer } from '@/components/layout/Footer'
 
 const Pending = ({ children }: { children: string }) => (
-  <span className="mx-1 rounded-md border border-bronze-400/40 bg-bronze-300/15 px-1.5 py-0.5 text-[0.82em] text-bronze-600">
+  <span className="mx-1 rounded-md border border-accent-400/40 bg-accent-300/15 px-1.5 py-0.5 text-[0.82em] text-accent-600">
     {children}
   </span>
 )

@@ -11,7 +11,7 @@ import { Eyebrow } from '@/components/ui/SectionHeading'
 import { Reveal, RevealText } from '@/components/ui/Reveal'
 
 const MAP_LEGEND = [
-  { label: 'Ville sélectionnée', tone: 'bg-glacier-500' },
+  { label: 'Ville sélectionnée', tone: 'bg-accent-500' },
   { label: 'Zone à confirmer', tone: 'bg-alu-600' },
 ]
 
@@ -26,7 +26,7 @@ export function ServiceArea() {
   return (
     <section id="zone" className="relative overflow-hidden bg-alu-100 py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-blueprint opacity-60" aria-hidden />
-      <div className="pointer-events-none absolute -right-40 top-24 size-[32rem] rounded-full bg-glacier-400/10 blur-[130px]" aria-hidden />
+      <div className="pointer-events-none absolute -right-40 top-24 size-[32rem] rounded-full bg-accent-400/10 blur-[130px]" aria-hidden />
 
       <div className="container-x relative">
         <div className="grid gap-14 lg:grid-cols-[1fr_0.92fr] lg:items-start lg:gap-20">
@@ -54,7 +54,7 @@ export function ServiceArea() {
                   </AnimatePresence>
                 </div>
                 <span className="flex shrink-0 items-center gap-2 rounded-full border border-ink-900/10 bg-white/80 px-3 py-1.5 text-[0.66rem] text-ink-600">
-                  <Navigation className="size-3.5 text-glacier-600" />
+                  <Navigation className="size-3.5 text-accent-600" />
                   Survol & sélection
                 </span>
               </div>
@@ -82,7 +82,7 @@ export function ServiceArea() {
                       className={cn(
                         'rounded-full border px-3 py-1.5 text-[0.72rem] transition-all duration-500',
                         isSelected
-                          ? 'border-glacier-500/50 bg-glacier-400/15 font-medium text-glacier-700'
+                          ? 'border-accent-500/50 bg-accent-400/15 font-medium text-accent-700'
                           : 'border-ink-900/10 bg-white/70 text-ink-600 hover:border-ink-900/25 hover:text-ink-900',
                       )}
                     >
@@ -142,7 +142,7 @@ export function ServiceArea() {
                     className="flex flex-wrap items-center justify-between gap-4 p-5"
                   >
                     <div className="flex items-center gap-3.5">
-                      <span className="flex size-11 items-center justify-center rounded-2xl border border-ink-900/10 bg-alu-100 text-glacier-700">
+                      <span className="flex size-11 items-center justify-center rounded-2xl border border-ink-900/10 bg-alu-100 text-accent-700">
                         <MapPin className="size-5" strokeWidth={1.6} />
                       </span>
                       <div>
@@ -158,7 +158,7 @@ export function ServiceArea() {
                       className={cn(
                         'flex items-center gap-2 rounded-full border px-3.5 py-2 text-[0.72rem]',
                         selected
-                          ? 'border-glacier-500/40 bg-glacier-400/10 text-glacier-700'
+                          ? 'border-accent-500/40 bg-accent-400/10 text-accent-700'
                           : 'border-ink-900/10 text-ink-500',
                       )}
                     >
@@ -186,7 +186,7 @@ export function ServiceArea() {
 
             {!allCitiesVerified && (
               <Reveal y={18} delay={0.22}>
-                <p className="mt-7 flex items-start gap-3 rounded-2xl border border-bronze-400/30 bg-bronze-300/10 p-4 text-[0.78rem] leading-relaxed text-bronze-600">
+                <p className="mt-7 flex items-start gap-3 rounded-2xl border border-accent-400/30 bg-accent-300/10 p-4 text-[0.78rem] leading-relaxed text-accent-600">
                   <AlertTriangle className="mt-0.5 size-4 shrink-0" />
                   <span>
                     <strong className="font-medium">Zone à confirmer.</strong> {serviceAreaNotice} Les villes listées
