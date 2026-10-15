@@ -90,12 +90,28 @@ const expectations = [
   'Gris aluminium',
   'Double vitrage',
   'Réfléchissant',
-  'Relief'.slice(0, 0) + 'Contact',
+  'Contact',
+  // Carte du Maroc : contour réel + villes accessibles
+  'Carte du Maroc',
+  'Royaume du Maroc',
+  'Natural Earth',
 ]
 
 const missing = expectations.filter((needle) => !html.includes(needle))
 if (missing.length) {
   console.error('❌ Contenu manquant dans le rendu :\n' + missing.map((m) => ` • ${m}`).join('\n'))
+  process.exit(1)
+}
+
+for (const city of ['Tanger', 'Casablanca', 'Agadir', 'Oujda', 'Marrakech']) {
+  if (!html.includes(city)) {
+    console.error(`❌ Ville absente de la carte : ${city}`)
+    process.exit(1)
+  }
+}
+
+if (!/M14 14L|M\d+(\.\d+)? \d/.test(html)) {
+  console.error('❌ Tracé de la carte du Maroc introuvable dans le rendu')
   process.exit(1)
 }
 

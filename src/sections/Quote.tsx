@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   AlertTriangle,
   BadgeCheck,
@@ -18,7 +18,8 @@ import {
 } from 'lucide-react'
 import { configuratorProducts, projectTypes } from '@/data/configurator'
 import { hasEmail, hasPhone, hasWhatsApp, mailtoLink, siteConfig, val, whatsappLink } from '@/data/site'
-import { useCity } from '@/lib/cityStore'
+import { cities } from '@/data/cities'
+import { cityByName, setCity, useCity } from '@/lib/cityStore'
 import { submitQuote, type SubmitOutcome } from '@/lib/quote'
 import { cn, formatBytes } from '@/lib/utils'
 import { Button, LinkButton } from '@/components/ui/Button'
@@ -50,12 +51,12 @@ type FormState = {
 }
 
 export function Quote() {
-  const [city, setCity] = useCity()
+  const [mapCity] = useCity()
   const [form, setForm] = useState<FormState>({
     name: '',
     phone: '',
     email: '',
-    city: city,
+    city: mapCity?.name ?? '',
     projectType: configuratorProducts[0].label,
     material: 'Aluminium ou PVC (à conseiller)',
     dimensions: '',
@@ -66,6 +67,11 @@ export function Quote() {
   const [outcome, setOutcome] = useState<SubmitOutcome | null>(null)
   const [copied, setCopied] = useState(false)
   const fileInput = useRef<HTMLInputElement>(null)
+
+  // La ville sélectionnée sur la carte alimente le formulaire
+  useEffect(() => {
+    if (mapCity) setForm((f) => (f.city === mapCity.name ? f : { ...f, city: mapCity.name }))
+  }, [mapCity])
 
   const set = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((f) => ({ ...f, [key]: value }))
@@ -257,7 +263,7 @@ export function Quote() {
                         value={form.city}
                         onChange={(e) => {
                           set('city', e.target.value)
-                          setCity(e.target.value)
+                          setCity(cityByName(e.target.value, cities))
                         }}
                         className={cn(
                           'rounded-xl border border-white/12 bg-white/[0.04] px-3.5 py-3 text-[0.88rem] text-alu-100 outline-none transition-colors focus:border-glacier-400/60 focus:bg-white/[0.07]',

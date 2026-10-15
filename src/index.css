@@ -66,6 +66,7 @@
   --animate-pulse-ring: pulse-ring 2.6s var(--ease-cristal) infinite;
   --animate-marquee: marquee 42s linear infinite;
   --animate-scan: scan 4.5s ease-in-out infinite;
+  --animate-dash-flow: dash-flow 1.6s linear infinite;
 }
 
 @keyframes shimmer {
@@ -116,6 +117,11 @@
   }
   100% {
     transform: translate3d(-50%, 0, 0);
+  }
+}
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -42;
   }
 }
 @keyframes scan {
