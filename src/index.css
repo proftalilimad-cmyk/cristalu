@@ -115,6 +115,41 @@
     transform: translate3d(-50%, 0, 0);
   }
 }
+@keyframes film-kenburns-a {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.13) translate3d(-1.6%, -1.1%, 0);
+  }
+}
+
+@keyframes film-kenburns-b {
+  from {
+    transform: scale(1.13) translate3d(1.6%, 1.1%, 0);
+  }
+  to {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes film-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.film-kenburns-a {
+  animation: film-kenburns-a 8s ease-out both;
+}
+
+.film-kenburns-b {
+  animation: film-kenburns-b 8s ease-out both;
+}
+
 @keyframes dash-flow {
   to {
     stroke-dashoffset: -42;

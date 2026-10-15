@@ -13,6 +13,10 @@ export const IMAGE_BASES = [
   'service-garde-corps',
   'service-volets',
   'service-miroiterie',
+  'film-sejour',
+  'film-detail',
+  'film-terrasse',
+  'film-nuit',
 ] as const
 
 export type ImageBase = (typeof IMAGE_BASES)[number]

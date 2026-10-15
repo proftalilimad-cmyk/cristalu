@@ -105,3 +105,18 @@ npm run preview  # contrôle visuel du build
 - [ ] Mentions légales et politique de confidentialité validées
 - [ ] Test sur mobile réel : hero 3D, configurateur, formulaire, CTA collant
 - [ ] Domaine réel dans `index.html` et `sitemap.xml`
+
+## Slider vidéo (section « Le film »)
+
+Le slider accepte de **vraies vidéos mp4** : déposez vos rushs dans `public/videos/`
+(ex. `film-sejour.mp4`, format 16:9, 1080p, ~5-15 s, muet ou avec son) puis renseignez
+le champ `video` de la slide dans `src/data/slides.ts` :
+
+```ts
+{ id: 'sejour', name: 'film-sejour', video: '/videos/film-sejour.mp4', ... }
+```
+
+Tant que `video` reste `null`, la slide joue son image avec un mouvement « caméra »
+(Ken Burns) — aucune URL vidéo inventée n'est publiée. Le bouton de son n'apparaît
+que lorsqu'une vraie vidéo est branchée. Pensez à compresser les mp4 (H.264,
+`-crf 26`, sans métadonnées) avant dépôt.

@@ -91,6 +91,9 @@ const expectations = [
   'Double vitrage',
   'Réfléchissant',
   'Contact',
+  // Slide vidéo (film)
+  'CRISTALUM en images',
+  'film-sejour-1600.webp',
   // Carte du Maroc : contour réel + villes accessibles
   'Carte du Maroc',
   'Royaume du Maroc',
