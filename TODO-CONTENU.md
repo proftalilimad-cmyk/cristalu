@@ -144,3 +144,14 @@ Mise à jour (post officiel) : le WhatsApp principal est désormais **0666 60 13
 fonctionner hors Maroc) ; le second numéro reste **0670 78 00 93**. La signature
 marketing « L'excellence en fenêtres PVC et aluminium » est affichée dans le
 pied de page.
+
+## ✅ Photos réelles de réalisations intégrées (21 oct. 2026)
+
+13 photos de chantier classées en 6 réalisations (`src/data/projects.ts`) :
+façade vitrée d'immeuble, garde-corps verre (3 photos), volets roulants &
+menuiseries (2), portes décoratives MOMO BOX — livraison (3), habillage façade
+composite (2), flotte d'intervention (2). La visionneuse plein écran affiche
+toutes les photos de chaque opération (vignettes cliquables).
+
+Reste à confirmer pour ces chantiers : lieux et noms de clients (la fiche
+affiche « Communiquée sur demande » en attendant votre accord).

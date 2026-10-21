@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ArrowLeft, ArrowRight, MapPin, Ruler, X } from 'lucide-react'
 import { gsap, initGsap } from '@/lib/gsap'
 import type { Project } from '@/data/projects'
@@ -28,6 +28,14 @@ export function ProjectViewer({
   const panel = useRef<HTMLDivElement>(null)
   const imageWrap = useRef<HTMLDivElement>(null)
   const lines = useRef<HTMLDivElement>(null)
+  const [photoIndex, setPhotoIndex] = useState(0)
+
+  const photos = project?.photos?.length ? project.photos : project ? [project.image] : []
+
+  // Chaque projet démarre sur sa photo de couverture
+  useEffect(() => {
+    setPhotoIndex(0)
+  }, [project])
 
   useEffect(() => {
     if (!project) return
@@ -104,13 +112,21 @@ export function ProjectViewer({
           style={{ clipPath: 'inset(0% 0% 0% 0% round 28px)' }}
         >
           <SmartImage
-            name={project.image}
-            alt={project.title}
+            key={photos[photoIndex]}
+            name={photos[photoIndex]}
+            alt={`${project.title} — photo ${photoIndex + 1}`}
             className="aspect-[16/10] w-full md:aspect-[16/9]"
             sizes="(max-width: 1280px) 100vw, 1280px"
             priority
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/85 via-transparent to-transparent" />
+          {photos.length > 1 && (
+            <div className="absolute right-5 top-5 rounded-full border border-white/15 bg-ink-900/55 px-3 py-1.5 font-mono text-[0.68rem] tracking-[0.14em] text-alu-200 backdrop-blur-md">
+              {String(photoIndex + 1).padStart(2, '0')}
+              <span className="mx-0.5 text-alu-500">/</span>
+              {String(photos.length).padStart(2, '0')}
+            </div>
+          )}
           <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 md:p-7">
             <div>
               <h3 className="font-display text-[clamp(1.3rem,3vw,2.1rem)] leading-tight tracking-tight text-alu-100">
@@ -138,6 +154,28 @@ export function ProjectViewer({
             </div>
           </div>
         </div>
+
+        {photos.length > 1 && (
+          <div className="mt-4 flex gap-2 overflow-x-auto no-scrollbar">
+            {photos.map((photo, i) => (
+              <button
+                key={photo}
+                type="button"
+                onClick={() => setPhotoIndex(i)}
+                aria-label={`Photo ${i + 1} sur ${photos.length}`}
+                aria-current={i === photoIndex}
+                className={cn(
+                  'relative h-16 w-24 shrink-0 overflow-hidden rounded-lg border transition-all duration-500 md:h-[4.5rem] md:w-28',
+                  i === photoIndex
+                    ? 'border-accent-500/80 opacity-100'
+                    : 'border-white/10 opacity-55 hover:border-white/35 hover:opacity-100',
+                )}
+              >
+                <SmartImage name={photo} alt="" sizes="112px" className="h-full w-full" />
+              </button>
+            ))}
+          </div>
+        )}
 
         <div ref={lines} className="mt-7 grid gap-7 md:grid-cols-[1.3fr_1fr] md:gap-12">
           <div>

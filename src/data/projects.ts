@@ -1,35 +1,22 @@
 /**
- * Réalisations / inspirations.
+ * Réalisations CRISTALU MAROC — photos réelles de chantier (fournies par
+ * l'entreprise, classées par opération).
  *
- * ⚠️ Les visuels actuellement fournis sont des images d'illustration
- * (architecturales). Remplacez `image` par vos vraies photos de chantier et
- * renseignez `location` : tant que `location` vaut `null`, la fiche projet
- * affiche « Communiquée sur demande » (confidentialité client) plutôt qu'une
- * ville inventée.
+ * ⚠️ Confidentialité : `location` reste `null` tant que l'entreprise n'a pas
+ * autorisé la publication des lieux — la fiche affiche « Communiquée sur
+ * demande ». Les descriptions décrivent uniquement ce qui est visible sur les
+ * photos (aucun client, chiffre ou lieu inventé).
  */
 import type { ImageBase } from '@/components/ui/SmartImage'
 
-export type ProjectCategory =
-  | 'Aluminium'
-  | 'PVC'
-  | 'Baies vitrées'
-  | 'Portes'
-  | 'Fenêtres'
-  | 'Pergolas'
-  | 'Garde-corps'
-  | 'Volets'
-  | 'Vitrerie'
+export type ProjectCategory = 'Façades' | 'Garde-corps' | 'Volets' | 'Portes' | 'Logistique'
 
 export const projectCategories: ProjectCategory[] = [
-  'Aluminium',
-  'PVC',
-  'Baies vitrées',
-  'Portes',
-  'Fenêtres',
-  'Pergolas',
+  'Façades',
   'Garde-corps',
   'Volets',
-  'Vitrerie',
+  'Portes',
+  'Logistique',
 ]
 
 export type Project = {
@@ -41,8 +28,10 @@ export type Project = {
   /** Matériaux mis en œuvre */
   materials: string[]
   description: string
-  /** Nom de base de l'image (voir `npm run images`) */
+  /** Image de couverture (voir `npm run images`) */
   image: ImageBase
+  /** Toutes les photos de l'opération (la première sert de couverture) */
+  photos: ImageBase[]
   /** Ville — `null` ⇒ « communiquée sur demande » */
   location: string | null
   /** Format d'affichage dans la galerie masonry */
@@ -52,98 +41,80 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'baie-coulissante-sejour',
-    title: 'Baie coulissante sur séjour ouvert',
-    category: 'Baies vitrées',
-    type: 'Coulissant 4 vantaux, seuil affleurant',
-    materials: ['Aluminium à rupture de pont thermique', 'Double vitrage', 'Anthracite thermolaqué'],
+    id: 'facade-vitree-immeuble',
+    title: 'Façade vitrée d’immeuble collectif',
+    category: 'Façades',
+    type: 'Rideau de verre teinté + fenêtres aluminium',
+    materials: ['Profilés aluminium', 'Vitrage teinté', 'Rideau de verre'],
     description:
-      'Grande ouverture coulissante reliant le séjour à la terrasse : profilés fins, rail encastré au sol pour un seuil affleurant, vitrage à isolation renforcée.',
-    image: 'service-baie',
+      'Grande façade vitrée teintée sur plusieurs niveaux et rangées de fenêtres aluminium alignées sur la tour d’habitation — pose menée en phase de chantier, de la structure au clos.',
+    image: 'real-facade-vitree',
+    photos: ['real-facade-vitree'],
+    location: null,
+    span: 'tall',
+  },
+  {
+    id: 'garde-corps-verre-immeuble',
+    title: 'Garde-corps verre sur balcons d’immeuble',
+    category: 'Garde-corps',
+    type: 'Garde-corps tout verre, fixations ponctuelles inox',
+    materials: ['Verre feuilleté trempé', 'Point-fixes inox', 'Pose en hauteur'],
+    description:
+      'Balcons d’un immeuble d’habitation protégés par garde-corps tout verre : panneaux feuilletés trempés fixés par point-fixes inox, pose réalisée sur échafaudage en pleine élévation.',
+    image: 'real-garde-corps-1',
+    photos: ['real-garde-corps-1', 'real-garde-corps-2', 'real-garde-corps-3'],
+    location: null,
+    span: 'tall',
+  },
+  {
+    id: 'volets-roulants-residence',
+    title: 'Volets roulants & menuiseries sur résidence',
+    category: 'Volets',
+    type: 'Volets roulants blancs + portes-fenêtres aluminium',
+    materials: ['Aluminium', 'Volets roulants', 'Quincaillerie de pose'],
+    description:
+      'Équipement complet d’une résidence : volets roulants et menuiseries posés en étage, coffres intégrés, réglages et finitions faits sur place par nos équipes.',
+    image: 'real-volets-1',
+    photos: ['real-volets-1', 'real-volets-2'],
+    location: null,
+    span: 'tall',
+  },
+  {
+    id: 'portes-decoratives-livraison',
+    title: 'Portes décoratives — livraison sur chantier',
+    category: 'Portes',
+    type: 'Portes décoratives MOMO BOX',
+    materials: ['Portes décoratives', 'Livraison assurée', 'Montage à l’étage'],
+    description:
+      'Approvisionnement et livraison des portes décoratives MOMO BOX directement sur chantier : nos camions transportent les blocs-portes du dépôt jusqu’à l’étage de pose, prêts au montage.',
+    image: 'real-portes-1',
+    photos: ['real-portes-1', 'real-portes-2', 'real-portes-3'],
     location: null,
     span: 'wide',
   },
   {
-    id: 'menuiserie-villa-contemporaine',
-    title: 'Menuiserie extérieure de villa contemporaine',
-    category: 'Aluminium',
-    type: 'Ensemble fenêtres, portes et coulissants',
-    materials: ['Aluminium thermolaqué', 'Quincaillerie de précision'],
+    id: 'habillage-facade-composite',
+    title: 'Habillage de façade en panneaux composite',
+    category: 'Façades',
+    type: 'Bardage ventilé sur ossature aluminium',
+    materials: ['Panneaux composite', 'Ossature aluminium', 'Menuiseries aluminium'],
     description:
-      'Unité de gamme et de teinte sur l’ensemble des baies : profils fins, coupes d’onglet nettes, alignement rigoureux des traverses.',
-    image: 'service-aluminium',
+      'Rénovation de façade : ossature aluminium, pose de panneaux composite et reprise des menuiseries sur l’ensemble du bâtiment, du soubassement aux derniers niveaux.',
+    image: 'real-habillage-1',
+    photos: ['real-habillage-1', 'real-habillage-2'],
     location: null,
-    span: 'tall',
+    span: 'wide',
   },
   {
-    id: 'fenetres-pvc-residentiel',
-    title: 'Fenêtres PVC série résidentielle',
-    category: 'PVC',
-    type: 'Fenêtres 2 vantaux, ouvrant à la française',
-    materials: ['PVC multi-chambres', 'Double vitrage', 'Blanc'],
+    id: 'flotte-intervention',
+    title: 'Notre flotte d’intervention',
+    category: 'Logistique',
+    type: 'Utilitaires CRISTALU sur chantier',
+    materials: ['Livraison de matériel', 'Intervention sur site', 'Équipes de pose'],
     description:
-      'Remplacement complet des menuiseries d’un logement : isolation thermique et acoustique améliorée, entretien minimal.',
-    image: 'service-pvc',
-    location: null,
-    span: 'normal',
-  },
-  {
-    id: 'pergola-terrasse',
-    title: 'Pergola bioclimatique sur terrasse',
-    category: 'Pergolas',
-    type: 'Pergola aluminium à lames orientables',
-    materials: ['Aluminium anthracite', 'Lames orientables', 'Fixations traversantes'],
-    description:
-      'Ombre maîtrisée à toute heure : lames orientables motorisées, structure dimensionnée pour l’exposition au vent et au soleil.',
-    image: 'service-pergola',
-    location: null,
-    span: 'normal',
-  },
-  {
-    id: 'garde-corps-verre',
-    title: 'Garde-corps verre & aluminium',
-    category: 'Garde-corps',
-    type: 'Garde-corps verre feuilleté, profil bas',
-    materials: ['Verre feuilleté trempé', 'Profil aluminium anodisé'],
-    description:
-      'Protection transparente sur balcon : verre feuilleté, profil de base aluminium et main courante fine, sécurité discrète.',
-    image: 'service-garde-corps',
-    location: null,
-    span: 'tall',
-  },
-  {
-    id: 'volets-roulants-alu',
-    title: 'Volets roulants aluminium isolés',
-    category: 'Volets',
-    type: 'Volets roulants à lames isolées',
-    materials: ['Aluminium', 'Lames injectées', 'Motorisation'],
-    description:
-      'Confort thermique et obscurcissement progressif : lames isolées, coffre intégré et commande centralisée.',
-    image: 'service-volets',
-    location: null,
-    span: 'normal',
-  },
-  {
-    id: 'miroiterie-salle-de-bain',
-    title: 'Miroiterie & paroi de douche',
-    category: 'Vitrerie',
-    type: 'Miroir sur mesure + verre trempé',
-    materials: ['Miroir', 'Verre trempé 8 mm', 'Profil aluminium'],
-    description:
-      'Miroirs découpés sur mesure et paroi de douche en verre trempé aux chants polis : la précision jusque dans les détails.',
-    image: 'service-miroiterie',
-    location: null,
-    span: 'normal',
-  },
-  {
-    id: 'facade-villa-archi',
-    title: 'Façade vitrée de villa',
-    category: 'Baies vitrées',
-    type: 'Façades vitrées & profilés verticaux',
-    materials: ['Aluminium anthracite', 'Vitrage de sécurité'],
-    description:
-      'Lecture continue de la façade : montants fins, traverses alignées et transparence maximale sur le jardin.',
-    image: 'arch-villa',
+      'Nos équipes interviennent avec leur matériel directement sur les chantiers : des utilitaires aux couleurs CRISTALU, équipés pour la livraison, la pose et les finitions.',
+    image: 'real-flotte-1',
+    photos: ['real-flotte-1', 'real-flotte-2'],
     location: null,
     span: 'wide',
   },
