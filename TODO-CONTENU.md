@@ -132,9 +132,15 @@ Sources : logo officiel, affiche publicitaire et photo de l'établissement.
 | Photo d'établissement | `public/images/raw/usine.png` (hero + À propos) | Photo de l'usine/showroom |
 | Téléphone principal | +212 537 35 12 76 (0537 35 12 76) | Affiche |
 | Téléphone secondaire | +212 661 23 94 93 (0661 23 94 93) | Affiche |
-| WhatsApp | +212 670 78 00 93 (0670 78 00 93) — bouton flottant actif | Affiche |
+| WhatsApp | +212 666 60 13 45 (0666 60 13 45) en ligne principale + +212 670 78 00 93 (0670 78 00 93) — bouton flottant actif | Post officiel |
 | E-mail | cristalu.maroc@gmail.com | Affiche |
 | Site / domaine | https://www.cristalu.ma (canonical, OG, sitemap alignés) | Affiche |
 | Nom de marque | **CRISTALU / CRISTALU MAROC** (le brief initial disait « CRISTALUM », corrigé d'après le logo et l'enseigne) | Logo + enseigne |
 
 Le message WhatsApp pré-rempli commence par « Bonjour Cristalu, … » (aligné sur le nom réel).
+
+Mise à jour (post officiel) : le WhatsApp principal est désormais **0666 60 13 45**
+(le lien fourni `wa.me/0666601345` doit être saisi `wa.me/212666601345` pour
+fonctionner hors Maroc) ; le second numéro reste **0670 78 00 93**. La signature
+marketing « L'excellence en fenêtres PVC et aluminium » est affichée dans le
+pied de page.

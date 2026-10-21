@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 import { navItems } from '@/data/navigation'
 import { services } from '@/data/services'
-import { hasSocial, hasWhatsApp, siteConfig, val, whatsappLink } from '@/data/site'
+import { hasSocial, hasWhatsApp, prettyPhone, siteConfig, val, whatsappLink } from '@/data/site'
 import { Logo } from './Logo'
 
 const legalLinks = [
@@ -45,7 +45,10 @@ export function Footer() {
           {/* Marque */}
           <div>
             <Logo tone="dark" />
-            <p className="mt-6 max-w-xs text-[0.9rem] leading-relaxed text-alu-400">
+            <p className="mt-6 font-display text-[0.95rem] italic leading-relaxed text-accent-300">
+              L’excellence en fenêtres PVC et aluminium.
+            </p>
+            <p className="mt-2 max-w-xs text-[0.9rem] leading-relaxed text-alu-400">
               {siteConfig.tagline} au Maroc. Nous concevons, fabriquons et installons des solutions qui associent
               design, performance et durabilité.
             </p>
@@ -183,7 +186,7 @@ export function Footer() {
                   <span>{hours}</span>
                 </li>
               )}
-              {hasWhatsApp() && (
+              {hasWhatsApp() && siteConfig.whatsapp.number && (
                 <li className="flex items-start gap-3">
                   <MessageCircle className="mt-0.5 size-4 shrink-0 text-accent-400" />
                   <a
@@ -192,7 +195,20 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="transition-colors hover:text-alu-100"
                   >
-                    WhatsApp
+                    WhatsApp · {prettyPhone(siteConfig.whatsapp.number)}
+                  </a>
+                </li>
+              )}
+              {siteConfig.whatsapp.numberAlt && (
+                <li className="flex items-start gap-3">
+                  <MessageCircle className="mt-0.5 size-4 shrink-0 text-accent-400" />
+                  <a
+                    href={whatsappLink(undefined, siteConfig.whatsapp.numberAlt) ?? '#'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-alu-100"
+                  >
+                    WhatsApp · {prettyPhone(siteConfig.whatsapp.numberAlt)}
                   </a>
                 </li>
               )}

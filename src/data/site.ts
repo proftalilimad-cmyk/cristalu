@@ -65,8 +65,10 @@ export const siteConfig = {
      * Numéro WhatsApp au format international sans « + », ex. '212612345678'.
      * Le bouton flottant n'apparaît QUE si `number` est renseigné et `enabled`.
      */
-    /** Affiche officielle : 0670 78 00 93 → format international sans « + ». */
-    number: '212670780093' as string | null,
+    /** Post officiel (lien wa.me) : 0666 60 13 45 → format international sans « + ». */
+    number: '212666601345' as string | null,
+    /** Deuxième ligne WhatsApp : 0670 78 00 93. */
+    numberAlt: '212670780093' as string | null,
     enabled: true as boolean,
     /** Message pré-rempli à l'ouverture de WhatsApp. */
     message:
@@ -138,11 +140,20 @@ export const hasWhatsApp = () =>
 export const hasSocial = () =>
   val(siteConfig.social.facebook) !== null || val(siteConfig.social.instagram) !== null
 
-/** Lien WhatsApp (ou null si non configuré). */
-export function whatsappLink(extra?: string): string | null {
-  if (!hasWhatsApp()) return null
+/** Lien WhatsApp (ou null si non configuré). `number` permet de viser la ligne secondaire. */
+export function whatsappLink(extra?: string, number?: string | null): string | null {
+  const target = number ?? siteConfig.whatsapp.number
+  if (!target) return null
+  if (!number && !hasWhatsApp()) return null
   const text = extra ? `${siteConfig.whatsapp.message} ${extra}` : siteConfig.whatsapp.message
-  return `https://wa.me/${siteConfig.whatsapp.number}?text=${encodeURIComponent(text)}`
+  return `https://wa.me/${target}?text=${encodeURIComponent(text)}`
+}
+
+/** Numéro international '212…' → affichage '+212 666 60 13 45'. */
+export function prettyPhone(intl: string): string {
+  const d = intl.replace(/[^\d]/g, '').replace(/^00/, '')
+  const withPlus = d.startsWith('212') ? `+${d}` : `+212${d.replace(/^0/, '')}`
+  return withPlus.replace(/^(\+\d{3})(\d{3})(\d{2})(\d{2})(\d{2}).*$/, '$1 $2 $3 $4 $5')
 }
 
 export function mailtoLink(subject: string, body: string): string | null {
