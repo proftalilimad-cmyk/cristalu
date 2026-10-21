@@ -12,7 +12,7 @@ export type SubmitOutcome = {
   message: string
 }
 
-const STORAGE_KEY = 'cristalum:demandes'
+const STORAGE_KEY = 'cristalu:demandes'
 
 /** Enregistre la demande localement (trace + secours si aucun canal n'est configuré). */
 export function persistQuote(request: QuoteRequest) {

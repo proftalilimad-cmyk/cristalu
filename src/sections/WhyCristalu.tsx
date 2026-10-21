@@ -58,7 +58,7 @@ function Counter({
   )
 }
 
-export function WhyCristalum() {
+export function WhyCristalu() {
   const years = val(siteConfig.joinery.yearsOfExperience)
 
   return (
@@ -68,7 +68,7 @@ export function WhyCristalum() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="08">Pourquoi CRISTALUM</Eyebrow>
+              <Eyebrow index="08">Pourquoi CRISTALU</Eyebrow>
             </Reveal>
             <RevealText
               text="Des engagements vérifiables"

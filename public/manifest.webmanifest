@@ -1,6 +1,6 @@
 {
-  "name": "CRISTALUM MAROC — Menuiserie Aluminium & PVC sur mesure",
-  "short_name": "CRISTALUM",
+  "name": "CRISTALU MAROC — Menuiserie Aluminium & PVC sur mesure",
+  "short_name": "CRISTALU",
   "description": "Menuiserie aluminium & PVC sur mesure au Maroc.",
   "start_url": "/",
   "display": "standalone",
@@ -9,9 +9,15 @@
   "lang": "fr",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any"
     }
   ]

@@ -80,7 +80,7 @@ export function WhatsAppFloat() {
       <button
         type="button"
         onClick={() => setExpanded((v) => !v)}
-        aria-label={expanded ? 'Fermer l’assistance WhatsApp' : 'Contacter CRISTALUM sur WhatsApp'}
+        aria-label={expanded ? 'Fermer l’assistance WhatsApp' : 'Contacter CRISTALU sur WhatsApp'}
         className="group relative flex size-13 items-center justify-center rounded-full bg-[#25D366] text-ink-950 shadow-[0_18px_40px_-18px_rgba(37,211,102,0.8)] transition-transform duration-500 hover:scale-105"
       >
         {!expanded && (
@@ -128,7 +128,7 @@ export function StickyMobileCTA() {
               <div className="flex items-center gap-2.5">
                 <LogoMark className="size-8 text-alu-300" />
                 <span className="flex flex-col leading-tight">
-                  <span className="font-display text-[0.82rem] tracking-[0.18em] text-alu-100">CRISTALUM</span>
+                  <span className="font-display text-[0.82rem] tracking-[0.18em] text-alu-100">CRISTALU</span>
                   <span className="text-[0.62rem] uppercase tracking-[0.2em] text-alu-400">Sur mesure</span>
                 </span>
               </div>
@@ -136,7 +136,7 @@ export function StickyMobileCTA() {
                 {hasPhone() && (
                   <a
                     href={telLink() ?? '#'}
-                    aria-label="Appeler CRISTALUM"
+                    aria-label="Appeler CRISTALU"
                     className="flex size-11 items-center justify-center rounded-full border border-white/15 text-alu-100"
                   >
                     <Phone className="size-4.5" />
@@ -205,7 +205,7 @@ export function BootScreen({ onDone }: { onDone: () => void }) {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="font-display text-[clamp(1.6rem,6vw,2.6rem)] font-semibold tracking-[0.34em] text-metal-light"
             >
-              CRISTALUM
+              CRISTALU
             </motion.span>
             <span className="relative h-px w-48 overflow-hidden bg-white/12">
               <motion.span

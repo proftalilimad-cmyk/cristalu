@@ -23,6 +23,7 @@ const legalLinks = [
 export function Footer() {
   const year = new Date().getFullYear()
   const phone = val(siteConfig.contact.phone)
+  const phoneAlt = val(siteConfig.contact.phoneAlt)
   const email = val(siteConfig.contact.email)
   const address = [
     val(siteConfig.contact.address.street),
@@ -139,6 +140,14 @@ export function Footer() {
                   <span className="text-alu-500">Téléphone à renseigner</span>
                 )}
               </li>
+              {phoneAlt && (
+                <li className="flex items-start gap-3">
+                  <Phone className="mt-0.5 size-4 shrink-0 text-accent-400" />
+                  <a href={`tel:${phoneAlt.replace(/\s/g, '')}`} className="transition-colors hover:text-alu-100">
+                    {phoneAlt}
+                  </a>
+                </li>
+              )}
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 size-4 shrink-0 text-accent-400" />
                 {email ? (

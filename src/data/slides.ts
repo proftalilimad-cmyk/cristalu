@@ -1,5 +1,5 @@
 /**
- * Slides du « film » CRISTALUM — décor cinématique du hero (section Hero).
+ * Slides du « film » CRISTALU — décor cinématique du hero (section Hero).
  *
  * `video` : chemin d'un fichier mp4 réel (ex. '/videos/film-sejour.mp4').
  * Déposez vos rushs dans `public/videos/` puis renseignez le champ — tant que
@@ -10,7 +10,7 @@
 export type FilmSlide = {
   id: string
   /** Base d'image produite par `npm run images` (public/images/<base>-800|1600.webp) */
-  name: 'film-sejour' | 'film-detail' | 'film-terrasse' | 'film-nuit'
+  name: 'film-sejour' | 'film-detail' | 'film-terrasse' | 'film-nuit' | 'usine'
   /** Chemin du mp4 réel — null tant que la vidéo n'existe pas */
   video: string | null
   eyebrow: string
@@ -48,6 +48,16 @@ export const filmSlides: FilmSlide[] = [
     title: 'Vivre dehors, à l’abri du soleil',
     caption:
       'Pergolas bioclimatiques et garde-corps verre pensés pour la lumière et le climat marocains.',
+    objectPosition: 'center 55%',
+  },
+  {
+    id: 'usine',
+    name: 'usine',
+    video: null,
+    eyebrow: 'L’atelier',
+    title: 'Notre établissement',
+    caption:
+      'Showroom, conception et fabrication : l’expertise CRISTALU MAROC réunie sous un même toit.',
     objectPosition: 'center 55%',
   },
   {

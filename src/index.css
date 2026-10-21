@@ -7,8 +7,8 @@
 @import '@fontsource/cormorant-garamond/400-italic.css';
 
 /* ------------------------------------------------------------------ *
- *  CRISTALUM — Design tokens
- *  Aesthetic: anthracite aluminium + verre + accent rouge CRISTALUM
+ *  CRISTALU — Design tokens
+ *  Aesthetic: anthracite aluminium + verre + accent rouge CRISTALU
  * ------------------------------------------------------------------ */
 @theme {
   /* Ink / anthracite scale (structure, aluminium profiles) */
@@ -30,7 +30,7 @@
   --color-alu-600: #6f777e;
   --color-alu-700: #545c63;
 
-  /* Rouge CRISTALUM — accent de marque (reflets, lumière, alertes) */
+  /* Rouge CRISTALU — accent de marque (reflets, lumière, alertes) */
   --color-accent-100: #fde8e9;
   --color-accent-200: #f9c2c5;
   --color-accent-300: #f08c91;

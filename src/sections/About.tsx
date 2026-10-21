@@ -78,8 +78,9 @@ export function About() {
           <div className="relative">
             <div ref={photo} className="relative">
               <SmartImage
-                name="arch-villa"
-                alt="Villa contemporaine au Maroc équipée de menuiseries aluminium anthracite"
+                name="usine"
+                alt="Établissement CRISTALU MAROC — showroom et atelier de menuiserie aluminium et PVC"
+                objectPosition="center 42%"
                 className="aspect-[4/5] rounded-[2rem] shadow-[0_60px_120px_-70px_rgba(6,8,10,0.65)] sm:aspect-[5/4] lg:aspect-[4/5]"
                 sizes="(max-width: 1024px) 100vw, 48vw"
               />
@@ -115,7 +116,7 @@ export function About() {
 
             <Reveal y={22} delay={0.1}>
               <p className="mt-6 max-w-xl text-[1rem] leading-relaxed text-ink-500">
-                CRISTALUM MAROC conçoit, fabrique et installe des menuiseries aluminium &amp; PVC sur mesure. Notre
+                CRISTALU MAROC conçoit, fabrique et installe des menuiseries aluminium &amp; PVC sur mesure. Notre
                 travail commence par une lecture attentive du bâtiment — lumière, orientation, usage — puis se
                 poursuit par une fabrication rigoureuse et une pose soignée.
               </p>

@@ -1,13 +1,15 @@
 /**
  * ============================================================================
- *  CRISTALUM MAROC — Configuration centrale du site
+ *  CRISTALU MAROC — Configuration centrale du site
  * ============================================================================
  *  ⚠️  IMPORTANT — INFORMATIONS À VÉRIFIER
  *
- *  Aucune information commerciale (téléphone, e-mail, adresse, numéro WhatsApp,
- *  réseaux sociaux, année de création, statistiques) n'a été fournie par
- *  l'entreprise. Ces champs sont donc volontairement VIDES et marqués
- *  `verified: false`.
+ *  Coordonnées principales (téléphones, WhatsApp, e-mail, site web) fournies
+ *  par l'entreprise (logo, affiche et photo d'établissement officiels) et
+ *  marquées `verified: true`.
+ *
+ *  Restent VIDES et marqués `verified: false` : adresse, carte Google Maps,
+ *  horaires, réseaux sociaux, identifiant légal, statistiques.
  *
  *  → Le site n'invente rien : tant qu'un champ est vide, l'interface affiche un
  *    état « à renseigner » au lieu d'une valeur inventée.
@@ -30,21 +32,22 @@ const pending = <T,>(hint?: string): Verifiable<T> => ({ value: null, verified: 
 export const verified = <T,>(value: T): Verifiable<T> => ({ value, verified: true })
 
 export const siteConfig = {
-  name: 'CRISTALUM',
-  legalName: 'CRISTALUM MAROC',
+  name: 'CRISTALU',
+  legalName: 'CRISTALU MAROC',
   tagline: 'Menuiserie Aluminium & PVC sur mesure',
   longTagline: 'Menuiserie Aluminium & PVC sur mesure au Maroc',
   supportingText:
     'Nous concevons, fabriquons et installons des solutions sur mesure qui associent design, performance et durabilité.',
 
-  url: 'https://www.cristalum.ma',
+  url: 'https://www.cristalu.ma',
 
   contact: {
-    /** Ex. '+212 5XX XX XX XX' */
-    phone: pending<string>('Renseigner le numéro de téléphone principal'),
-    /** Deuxième ligne (mobile / atelier). */
-    phoneAlt: pending<string>('Renseigner un second numéro (facultatif)'),
-    email: pending<string>('Renseigner l’adresse e-mail de contact'),
+    /** Affiche officielle : 0537 35 12 76 */
+    phone: verified('+212 537 35 12 76'),
+    /** Affiche officielle : 0661 23 94 93 */
+    phoneAlt: verified('+212 661 23 94 93'),
+    /** Affiche officielle. */
+    email: verified('cristalu.maroc@gmail.com'),
     emailSales: pending<string>('Renseigner l’e-mail commercial (facultatif)'),
     address: {
       street: pending<string>('N° et rue / zone industrielle'),
@@ -62,11 +65,12 @@ export const siteConfig = {
      * Numéro WhatsApp au format international sans « + », ex. '212612345678'.
      * Le bouton flottant n'apparaît QUE si `number` est renseigné et `enabled`.
      */
-    number: null as string | null,
-    enabled: false as boolean,
+    /** Affiche officielle : 0670 78 00 93 → format international sans « + ». */
+    number: '212670780093' as string | null,
+    enabled: true as boolean,
     /** Message pré-rempli à l'ouverture de WhatsApp. */
     message:
-      'Bonjour Cristalum, je souhaite obtenir un devis pour un projet de menuiserie aluminium/PVC.',
+      'Bonjour Cristalu, je souhaite obtenir un devis pour un projet de menuiserie aluminium/PVC.',
   },
 
   hours: pending<string>('Horaires d’ouverture, ex. « Lun – Sam : 8h30 – 18h30 »'),
@@ -179,7 +183,7 @@ export const UNVERIFIED_FIELDS: string[] = (
 if (import.meta.env.DEV) {
   // eslint-disable-next-line no-console
   console.info(
-    `%c[CRISTALUM] ${UNVERIFIED_FIELDS.length + 1} informations à confirmer avant mise en ligne :\n` +
+    `%c[CRISTALU] ${UNVERIFIED_FIELDS.length + 1} informations à confirmer avant mise en ligne :\n` +
       UNVERIFIED_FIELDS.map((k) => ` • ${k}`).join('\n') +
       `\n • whatsapp.number (bouton WhatsApp masqué tant qu’il est vide)` +
       `\n • zone d’intervention (src/data/cities.ts)` +

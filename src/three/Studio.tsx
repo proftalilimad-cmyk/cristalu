@@ -54,7 +54,7 @@ export function StudioEnvironment({ resolution = 256 }: { resolution?: number })
         scale={[12, 5, 1]}
         target={[0, 0, 0]}
       />
-      {/* Rinçage bas — écho rouge CRISTALUM */}
+      {/* Rinçage bas — écho rouge CRISTALU */}
       <Lightformer
         form="rect"
         intensity={0.85}

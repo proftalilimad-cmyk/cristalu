@@ -3,7 +3,7 @@ import { siteConfig, val } from '@/data/site'
 import { services } from '@/data/services'
 import { cities } from '@/data/cities'
 
-const SCRIPT_ID = 'cristalum-jsonld'
+const SCRIPT_ID = 'cristalu-jsonld'
 
 /**
  * Enrichit les données structurées (schema.org) avec les informations
@@ -27,7 +27,7 @@ export function SeoJsonLd() {
       name: siteConfig.legalName,
       description: `${siteConfig.tagline} au Maroc : ${services.map((s) => s.title).join(', ')}.`,
       url: siteConfig.url,
-      image: `${siteConfig.url}/images/og-cristalum.jpg`,
+      image: `${siteConfig.url}/images/og-cristalu.jpg`,
       priceRange: 'Sur devis',
       areaServed: cities.map((c) => ({ '@type': 'City', name: c.name })),
       makesOffer: services.map((s) => ({

@@ -1,6 +1,6 @@
 # TODO — Contenu à valider avant mise en ligne
 
-Ce site a été construit **sans aucune information commerciale vérifiée** sur CRISTALUM MAROC.
+Ce site a été construit **sans aucune information commerciale vérifiée** sur CRISTALU MAROC.
 Plutôt que d'inventer des chiffres, des adresses ou des réalisations, tous les champs concernés sont
 **laissés vides** et signalés dans l'interface (« à renseigner », « à confirmer », éléments masqués).
 
@@ -24,7 +24,7 @@ La règle appliquée partout : **une donnée non confirmée = une information qu
 | Hébergeur | vide | page Mentions légales | mentions légales |
 
 > Le bouton WhatsApp flottant **n'apparaît pas** tant que `whatsapp.number` est vide : le message pré-rempli
-> demandé (« Bonjour Cristalum, je souhaite obtenir un devis pour un projet de menuiserie aluminium/PVC. »)
+> demandé (« Bonjour Cristalu, je souhaite obtenir un devis pour un projet de menuiserie aluminium/PVC. »)
 > est déjà en place dans `siteConfig.whatsapp.message` et s'ouvre automatiquement avec le numéro renseigné.
 
 ## 2. Statistiques — aucune donnée chiffrée inventée
@@ -72,7 +72,7 @@ représentent pas les chantiers réels de l'entreprise). À remplacer par des ph
 - `src/data/services.ts` : descriptions des 7 familles de solutions, points techniques et applications.
 - `src/sections/About.tsx` : histoire de l'atelier, méthode de travail (aucune date ni effectif n'est avancé).
 - `src/data/process.ts` : formulation des 6 étapes.
-- `src/sections/WhyCristalum.tsx` : engagements (« Sur mesure », « Aluminium & PVC », « Qualité »).
+- `src/sections/WhyCristalu.tsx` : engagements (« Sur mesure », « Aluminium & PVC », « Qualité »).
 - `src/pages/Legal.tsx` : mentions légales et politique de confidentialité sont des **modèles à faire valider**
   par un conseil juridique (champs « À COMPLÉTER » mis en évidence).
 
@@ -82,11 +82,11 @@ représentent pas les chantiers réels de l'entreprise). À remplacer par des ph
   - `{ provider: 'formspree', formId: '…' }` (rapide, sans backend),
   - `{ provider: 'endpoint', url: 'https://…' }` pour votre API / n8n / Make.
   Sans configuration, la demande est enregistrée localement et transmise via WhatsApp ou e-mail si configuré.
-- **Domaines** : remplacer `https://www.cristalum.ma` dans `index.html` (canonical, OG, JSON-LD) et
+- **Domaines** : remplacer `https://www.cristalu.ma` dans `index.html` (canonical, OG, JSON-LD) et
   `public/sitemap.xml`.
 - **Analytics** : aucun traceur n'est installé (cohérent avec la politique de confidentialité). à ajouter
   seulement si nécessaire.
-- **Images Open Graph** : `public/images/og-cristalum.jpg` est générée depuis la photo du hero — régénérez-la
+- **Images Open Graph** : `public/images/og-cristalu.jpg` est générée depuis la photo du hero — régénérez-la
   après remplacement des visuels (`npm run images`).
 
 ## 7. Checklist de recette
@@ -120,3 +120,21 @@ Tant que `video` reste `null`, la slide joue son image avec un mouvement « cam�
 (Ken Burns) — aucune URL vidéo inventée n'est publiée. Le bouton de son n'apparaît
 que lorsqu'une vraie vidéo est branchée. Pensez à compresser les mp4 (H.264,
 `-crf 26`, sans métadonnées) avant dépôt.
+
+
+## ✅ Confirmé depuis les éléments de marque fournis (21 oct. 2026)
+
+Sources : logo officiel, affiche publicitaire et photo de l'établissement.
+
+| Champ | Valeur retenue | Source |
+| --- | --- | --- |
+| Logo | `public/images/logo-cristalu.png` (+ mark `logo-mark.png`, favicon) | Logo officiel |
+| Photo d'établissement | `public/images/raw/usine.png` (hero + À propos) | Photo de l'usine/showroom |
+| Téléphone principal | +212 537 35 12 76 (0537 35 12 76) | Affiche |
+| Téléphone secondaire | +212 661 23 94 93 (0661 23 94 93) | Affiche |
+| WhatsApp | +212 670 78 00 93 (0670 78 00 93) — bouton flottant actif | Affiche |
+| E-mail | cristalu.maroc@gmail.com | Affiche |
+| Site / domaine | https://www.cristalu.ma (canonical, OG, sitemap alignés) | Affiche |
+| Nom de marque | **CRISTALU / CRISTALU MAROC** (le brief initial disait « CRISTALUM », corrigé d'après le logo et l'enseigne) | Logo + enseigne |
+
+Le message WhatsApp pré-rempli commence par « Bonjour Cristalu, … » (aligné sur le nom réel).

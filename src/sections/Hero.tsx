@@ -36,7 +36,7 @@ const specs = [
 ]
 
 /**
- * Hero « CRISTALUM en images » — le slider cinématique (plans du film avec
+ * Hero « CRISTALU en images » — le slider cinématique (plans du film avec
  * mouvement caméra, fondu enchaîné, autoplay et commandes) tient lieu de décor,
  * sous le texte de marque, la fenêtre 3D interactive et les CTA.
  */
@@ -157,7 +157,7 @@ export function Hero() {
       className="relative flex min-h-[100svh] items-center overflow-hidden bg-ink-900 pt-28 pb-24 md:pt-32"
       style={{ touchAction: 'pan-y' }}
     >
-      {/* Décor : slider cinématique « CRISTALUM en images » */}
+      {/* Décor : slider cinématique « CRISTALU en images » */}
       <div className="absolute inset-0 overflow-hidden">
         <div ref={imageRef} className="absolute inset-0 will-change-transform">
           {filmSlides.map((item, i) => {
@@ -240,7 +240,7 @@ export function Hero() {
             Maroc · Sur mesure
           </motion.div>
 
-          <h1 className="sr-only">CRISTALUM — Menuiserie aluminium &amp; PVC sur mesure au Maroc</h1>
+          <h1 className="sr-only">CRISTALU — Menuiserie aluminium &amp; PVC sur mesure au Maroc</h1>
 
           <motion.p
             aria-hidden
@@ -249,7 +249,7 @@ export function Hero() {
             transition={{ delay: 0.35, duration: 1 }}
             className="font-display text-[clamp(3.4rem,12vw,9rem)] font-semibold leading-[0.86] tracking-[-0.045em] text-metal-light"
           >
-            CRISTALUM
+            CRISTALU
           </motion.p>
 
           <motion.div

@@ -1,9 +1,9 @@
 {
-  "name": "cristalum-maroc",
+  "name": "cristalu-maroc",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Site web premium CRISTALUM MAROC — Menuiserie aluminium & PVC sur mesure au Maroc",
+  "description": "Site web premium CRISTALU MAROC — Menuiserie aluminium & PVC sur mesure au Maroc",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

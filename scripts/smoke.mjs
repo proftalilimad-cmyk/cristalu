@@ -74,7 +74,7 @@ const { render } = await import(path.join(root, '.smoke/entry.js'))
 const html = render()
 
 const expectations = [
-  'CRISTALUM',
+  'CRISTALU',
   'Menuiserie Aluminium &amp; PVC sur mesure au Maroc',
   'L’aluminium en mouvement',
   'L’atelier',

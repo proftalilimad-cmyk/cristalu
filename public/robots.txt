@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cristalum.ma/sitemap.xml
+Sitemap: https://www.cristalu.ma/sitemap.xml

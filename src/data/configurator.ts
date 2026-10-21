@@ -269,7 +269,7 @@ export const projectCities = [
 ] as const
 
 export const installationOptions = [
-  'Installation par CRISTALUM (pose comprise)',
+  'Installation par CRISTALU (pose comprise)',
   'Fourniture seule (sans pose)',
   'Rénovation / remplacement d’un existant',
   'Projet neuf en construction',

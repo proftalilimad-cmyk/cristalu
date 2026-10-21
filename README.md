@@ -1,6 +1,6 @@
-# CRISTALUM MAROC — Site vitrine premium
+# CRISTALU MAROC — Site vitrine premium
 
-Site web immersif pour **CRISTALUM MAROC**, spécialiste de la **menuiserie aluminium & PVC sur mesure au Maroc**.
+Site web immersif pour **CRISTALU MAROC**, spécialiste de la **menuiserie aluminium & PVC sur mesure au Maroc**.
 Identité visuelle : aluminium anodisé anthracite, verre, reflets, ingénierie de précision et architecture marocaine
 contemporaine.
 
@@ -126,4 +126,4 @@ Le site est 100 % statique : `npm run build` produit `dist/` à déployer tel qu
 
 - Redirection SPA : les routes légales utilisent des ancres (`#/mentions-legales`), aucune règle de réécriture
   n'est nécessaire.
-- Pensez à remplacer `https://www.cristalum.ma` dans `index.html` et `public/sitemap.xml` par le domaine réel.
+- Pensez à remplacer `https://www.cristalu.ma` dans `index.html` et `public/sitemap.xml` par le domaine réel.

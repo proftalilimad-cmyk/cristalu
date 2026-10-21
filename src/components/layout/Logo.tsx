@@ -1,50 +1,44 @@
 import { cn } from '@/lib/utils'
 
-/** Marque CRISTALUM : un cadre aluminium dont le vitrage capte la lumière. */
+/**
+ * Marque CRISTALU MAROC — logo officiel fourni par l'entreprise
+ * (fond blanc natif = plaque de lisibilité garantie sur tous les fonds).
+ */
+
+/** Symbole seul (C + chevron) — utilisé dans les panneaux flottants. */
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 40 40" className={cn('h-9 w-9', className)} aria-hidden>
-      <defs>
-        <linearGradient id="cristalum-metal" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="currentColor" stopOpacity="0.95" />
-          <stop offset="0.5" stopColor="currentColor" stopOpacity="0.55" />
-          <stop offset="1" stopColor="currentColor" stopOpacity="0.9" />
-        </linearGradient>
-        <linearGradient id="cristalum-glass" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0" stopColor="#F08C91" stopOpacity="0.12" />
-          <stop offset="0.5" stopColor="#FDE8E9" stopOpacity="0.85" />
-          <stop offset="1" stopColor="#F08C91" stopOpacity="0.2" />
-        </linearGradient>
-      </defs>
-      <rect x="3" y="2" width="34" height="36" rx="3" fill="none" stroke="url(#cristalum-metal)" strokeWidth="2" />
-      <rect x="10" y="9" width="20" height="22" rx="1.5" fill="url(#cristalum-glass)" />
-      <path d="M11 30 L29 11" stroke="currentColor" strokeOpacity="0.75" strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M17 30 L30 16" stroke="currentColor" strokeOpacity="0.35" strokeWidth="1.1" strokeLinecap="round" />
-    </svg>
+    <span
+      className={cn(
+        'inline-flex items-center justify-center overflow-hidden rounded-lg border border-ink-900/10 bg-white shadow-[0_8px_22px_-14px_rgba(6,8,10,0.55)]',
+        className,
+      )}
+    >
+      <img src="/images/logo-mark.png" alt="" aria-hidden className="h-full w-full object-contain" />
+    </span>
   )
 }
 
-export function Logo({ tone = 'light', className }: { tone?: 'light' | 'dark'; className?: string }) {
+/** Logo complet « CRISTALU MAROC ». */
+export function Logo({
+  tone: _tone,
+  className,
+}: {
+  /** Conservé pour compatibilité : le fond blanc natif s'adapte à tous les tons. */
+  tone?: 'light' | 'dark'
+  className?: string
+}) {
+  void _tone
   return (
-    <span className={cn('group inline-flex items-center gap-3', className)}>
-      <LogoMark className="text-current transition-transform duration-700 group-hover:rotate-[3deg]" />
-      <span className="flex flex-col leading-none">
-        <span
-          className={cn(
-            'font-display text-[1.16rem] font-semibold tracking-[0.26em]',
-            tone === 'light' ? 'text-ink-900' : 'text-alu-100',
-          )}
-        >
-          CRISTALUM
-        </span>
-        <span
-          className={cn(
-            'mt-1 text-[0.56rem] font-medium uppercase tracking-[0.32em]',
-            tone === 'light' ? 'text-ink-500' : 'text-alu-400/85',
-          )}
-        >
-          Aluminium · PVC · Verre
-        </span>
+    <span className={cn('group inline-flex items-center', className)}>
+      <span className="inline-flex items-center overflow-hidden rounded-xl border border-white/70 bg-white shadow-[0_12px_32px_-18px_rgba(6,8,10,0.8)] transition-transform duration-700 group-hover:-translate-y-0.5">
+        <img
+          src="/images/logo-cristalu.png"
+          alt="CRISTALU MAROC"
+          width={484}
+          height={96}
+          className="h-8 w-auto px-2.5 py-2 md:h-9"
+        />
       </span>
     </span>
   )

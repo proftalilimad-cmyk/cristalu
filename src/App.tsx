@@ -18,7 +18,7 @@ import { BeforeAfter } from '@/sections/BeforeAfter'
 import { Gallery } from '@/sections/Gallery'
 import { Configurator } from '@/sections/Configurator'
 import { Process } from '@/sections/Process'
-import { WhyCristalum } from '@/sections/WhyCristalum'
+import { WhyCristalu } from '@/sections/WhyCristalu'
 import { Architecture } from '@/sections/Architecture'
 import { ServiceArea } from '@/sections/ServiceArea'
 import { Quote } from '@/sections/Quote'
@@ -66,7 +66,7 @@ export function App() {
         <Gallery />
         <Configurator />
         <Process />
-        <WhyCristalum />
+        <WhyCristalu />
         <Architecture />
         <ServiceArea />
         <Quote />

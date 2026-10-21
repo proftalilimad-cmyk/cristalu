@@ -1,6 +1,6 @@
 /**
  * Point d'entrée GSAP unique : enregistre les plugins une seule fois et
- * configure les valeurs par défaut du design system CRISTALUM.
+ * configure les valeurs par défaut du design system CRISTALU.
  */
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

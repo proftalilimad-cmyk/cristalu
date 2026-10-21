@@ -53,8 +53,8 @@ async function main() {
   await sharp(heroSrc)
     .resize(1200, 630, { fit: 'cover', position: 'attention' })
     .jpeg({ quality: 84, mozjpeg: true })
-    .toFile(path.join(outDir, 'og-cristalum.jpg'))
-  report.push('og-cristalum.jpg — 1200×630')
+    .toFile(path.join(outDir, 'og-cristalu.jpg'))
+  report.push('og-cristalu.jpg — 1200×630')
 
   // Fond du hero (dégradé d'ambiance) — version très compressée pour mobile
   const heroBuffer = await readFile(path.join(outDir, `${HERO}-800.webp`))

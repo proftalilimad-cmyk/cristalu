@@ -82,23 +82,23 @@ export function MoroccoMap({ activeId, selectedName, onHover, onSelect, classNam
       viewBox={MOROCCO_VIEWBOX}
       className={cn('relative w-full', className)}
       role="img"
-      aria-label="Carte du Maroc — villes desservies par CRISTALUM"
+      aria-label="Carte du Maroc — villes desservies par CRISTALU"
     >
       <defs>
-        <linearGradient id="cristalum-ma-fill" x1="0" y1="0" x2="0.9" y2="1">
+        <linearGradient id="cristalu-ma-fill" x1="0" y1="0" x2="0.9" y2="1">
           <stop offset="0" stopColor="#ffffff" stopOpacity="0.95" />
           <stop offset="0.45" stopColor="#e6e9eb" stopOpacity="0.92" />
           <stop offset="1" stopColor="#b6bdc2" stopOpacity="0.88" />
         </linearGradient>
-        <linearGradient id="cristalum-ma-line" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id="cristalu-ma-line" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stopColor="#f08c91" />
           <stop offset="0.45" stopColor="#c8102e" />
           <stop offset="1" stopColor="#e2494f" />
         </linearGradient>
-        <filter id="cristalum-ma-shadow" x="-12%" y="-12%" width="124%" height="124%">
+        <filter id="cristalu-ma-shadow" x="-12%" y="-12%" width="124%" height="124%">
           <feDropShadow dx="0" dy="14" stdDeviation="18" floodColor="#06080a" floodOpacity="0.18" />
         </filter>
-        <filter id="cristalum-ma-glow" x="-200%" y="-200%" width="500%" height="500%">
+        <filter id="cristalu-ma-glow" x="-200%" y="-200%" width="500%" height="500%">
           <feGaussianBlur stdDeviation="9" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
@@ -112,11 +112,11 @@ export function MoroccoMap({ activeId, selectedName, onHover, onSelect, classNam
       {/* Contour du Royaume */}
       <path
         d={MOROCCO_PATH}
-        fill="url(#cristalum-ma-fill)"
-        stroke="url(#cristalum-ma-line)"
+        fill="url(#cristalu-ma-fill)"
+        stroke="url(#cristalu-ma-line)"
         strokeWidth="2.4"
         strokeLinejoin="round"
-        filter="url(#cristalum-ma-shadow)"
+        filter="url(#cristalu-ma-shadow)"
       />
 
       {/* Halo de la ville active */}
@@ -126,7 +126,7 @@ export function MoroccoMap({ activeId, selectedName, onHover, onSelect, classNam
         r="46"
         fill="#e2494f"
         opacity="0.16"
-        filter="url(#cristalum-ma-glow)"
+        filter="url(#cristalu-ma-glow)"
         animate={{ r: [40, 52, 40], opacity: [0.1, 0.22, 0.1] }}
         transition={{ duration: 3.4, repeat: Infinity, ease: 'easeInOut' }}
       />

@@ -40,4 +40,4 @@ export const cities: City[] = [
 export const allCitiesVerified = cities.every((c) => c.verified)
 
 export const serviceAreaNotice =
-  'Zone d’intervention à confirmer avec l’équipe CRISTALUM avant publication.'
+  'Zone d’intervention à confirmer avec l’équipe CRISTALU avant publication.'

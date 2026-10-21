@@ -192,7 +192,7 @@ export function Quote() {
                 )}
                 {hasEmail() && (
                   <LinkButton
-                    href={mailtoLink('Demande de devis — CRISTALUM', 'Bonjour,') ?? '#'}
+                    href={mailtoLink('Demande de devis — CRISTALU', 'Bonjour,') ?? '#'}
                     size="md"
                     variant="ghost"
                     className="text-alu-300 hover:text-alu-100"
@@ -450,7 +450,7 @@ export function Quote() {
                         icon={copied ? <Check className="size-3.5" /> : <Copy className="size-3.5" />}
                         onClick={() => {
                           void navigator.clipboard?.writeText(
-                            `Demande de devis CRISTALUM (${outcome.reference})\n${form.name} · ${form.phone} · ${form.city}\n${form.projectType} · ${form.material}\n${form.dimensions}\n${form.message}`,
+                            `Demande de devis CRISTALU (${outcome.reference})\n${form.name} · ${form.phone} · ${form.city}\n${form.projectType} · ${form.material}\n${form.dimensions}\n${form.message}`,
                           )
                           setCopied(true)
                           setTimeout(() => setCopied(false), 2200)
