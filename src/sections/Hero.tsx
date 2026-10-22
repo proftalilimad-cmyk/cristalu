@@ -1,4 +1,4 @@
-import { lazy, useCallback, useEffect, useRef, useState } from 'react'
+import React, { lazy, useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
   ArrowUpRight,
@@ -40,6 +40,37 @@ const specs = [
  * mouvement caméra, fondu enchaîné, autoplay et commandes) tient lieu de décor,
  * sous le texte de marque, la fenêtre 3D interactive et les CTA.
  */
+
+function FilmVideo({ src, poster, alt, muted, pos }: { src: string; poster: string; alt: string; muted: boolean; pos: string }) {
+  const ref = React.useRef<HTMLVideoElement>(null)
+  const [failed, setFailed] = React.useState(false)
+  React.useEffect(() => {
+    if (failed) return
+    const v = ref.current
+    if (!v) return
+    v.muted = muted
+    if (v.paused) v.play().catch(() => {})
+  }, [muted, failed])
+  if (failed) {
+    return <img src={poster} alt={alt} className="h-full w-full object-cover" style={{ objectPosition: pos }} />
+  }
+  return (
+    <video
+      ref={ref}
+      className="h-full w-full object-cover"
+      src={src}
+      poster={poster}
+      autoPlay
+      loop
+      muted={muted}
+      playsInline
+      preload="auto"
+      onError={() => setFailed(true)}
+      style={{ objectPosition: pos }}
+    />
+  )
+}
+
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
@@ -172,16 +203,23 @@ export function Hero() {
                 )}
               >
                 {item.video ? (
-                  <video
-                    className="h-full w-full object-cover"
-                    src={item.video}
-                    poster={`/images/${item.name}-1600.webp`}
-                    autoPlay={active}
-                    loop
-                    muted={muted}
-                    playsInline
-                    preload={active ? 'auto' : 'none'}
-                  />
+                  active ? (
+                    <FilmVideo
+                      src={item.video}
+                      poster={`/images/${item.name}-1600.webp`}
+                      alt={item.title}
+                      muted={muted}
+                      pos={item.objectPosition ?? 'center'}
+                    />
+                  ) : (
+                    <img
+                      src={`/images/${item.name}-1600.webp`}
+                      alt=""
+                      aria-hidden
+                      className="h-full w-full object-cover"
+                      style={{ objectPosition: item.objectPosition ?? 'center' }}
+                    />
+                  )
                 ) : (
                   <SmartImage
                     name={item.name}
@@ -247,9 +285,9 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.35, duration: 1 }}
-            className="font-display text-[clamp(3.4rem,12vw,9rem)] font-semibold leading-[0.86] tracking-[-0.045em] text-metal-light"
+            className="font-display text-[clamp(2.4rem,9vw,6.8rem)] tracking-[-0.03em] font-semibold leading-[0.86] tracking-[-0.045em] text-metal-light"
           >
-            CRISTALU
+            CRISTALU MAROC
           </motion.p>
 
           <motion.div

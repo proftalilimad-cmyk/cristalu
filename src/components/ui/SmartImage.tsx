@@ -18,6 +18,7 @@ export const IMAGE_BASES = [
   'film-terrasse',
   'film-nuit',
   'usine',
+  'video-poster',
   'real-facade-vitree',
   'real-garde-corps-1',
   'real-garde-corps-2',

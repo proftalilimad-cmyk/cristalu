@@ -68,7 +68,7 @@ export function WhyCristalu() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="08">Pourquoi CRISTALU</Eyebrow>
+              <Eyebrow index="08">Pourquoi CRISTALU MAROC</Eyebrow>
             </Reveal>
             <RevealText
               text="Des engagements vérifiables"

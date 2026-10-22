@@ -70,7 +70,7 @@ export function Header() {
         )}
       >
         <div className="container-x flex items-center justify-between gap-6">
-          <a href="#accueil" className="shrink-0" aria-label="CRISTALU — retour à l’accueil">
+          <a href="#accueil" className="shrink-0" aria-label="CRISTALU MAROC — retour à l’accueil">
             <Logo tone={overHero ? 'dark' : 'dark'} />
           </a>
 

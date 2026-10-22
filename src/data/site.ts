@@ -32,7 +32,7 @@ const pending = <T,>(hint?: string): Verifiable<T> => ({ value: null, verified: 
 export const verified = <T,>(value: T): Verifiable<T> => ({ value, verified: true })
 
 export const siteConfig = {
-  name: 'CRISTALU',
+  name: 'CRISTALU MAROC',
   legalName: 'CRISTALU MAROC',
   tagline: 'Menuiserie Aluminium & PVC sur mesure',
   longTagline: 'Menuiserie Aluminium & PVC sur mesure au Maroc',

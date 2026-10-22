@@ -21,6 +21,16 @@ export type FilmSlide = {
 
 export const filmSlides: FilmSlide[] = [
   {
+    id: 'video-showroom',
+    name: 'usine',
+    video: '/videos/cristalu-showroom.mp4',
+    eyebrow: 'CRISTALU MAROC',
+    title: 'L’excellence en fenêtres PVC et aluminium',
+    caption:
+      'Découvrez notre showroom, notre atelier et nos réalisations en vidéo — Bienvenue chez Cristalu Maroc.',
+    objectPosition: 'center 55%',
+  },
+  {
     id: 'sejour',
     name: 'film-sejour',
     video: null,
