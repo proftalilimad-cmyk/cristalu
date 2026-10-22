@@ -31,6 +31,11 @@ export const IMAGE_BASES = [
   'real-habillage-2',
   'real-flotte-1',
   'real-flotte-2',
+  'real-facade-bardage-noir',
+  'real-garde-corps-4',
+  'real-manutention-verre-1',
+  'real-piscine-villa',
+  'real-portes-4',
 ] as const
 
 export type ImageBase = (typeof IMAGE_BASES)[number]

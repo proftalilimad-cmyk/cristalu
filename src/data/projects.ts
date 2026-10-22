@@ -9,11 +9,12 @@
  */
 import type { ImageBase } from '@/components/ui/SmartImage'
 
-export type ProjectCategory = 'Façades' | 'Garde-corps' | 'Volets' | 'Portes' | 'Logistique'
+export type ProjectCategory = 'Façades' | 'Garde-corps' | 'Volets' | 'Portes' | 'Logistique' | 'Vitrerie'
 
 export const projectCategories: ProjectCategory[] = [
   'Façades',
   'Garde-corps',
+  'Vitrerie',
   'Volets',
   'Portes',
   'Logistique',
@@ -62,7 +63,7 @@ export const projects: Project[] = [
     description:
       'Balcons d’un immeuble d’habitation protégés par garde-corps tout verre : panneaux feuilletés trempés fixés par point-fixes inox, pose réalisée sur échafaudage en pleine élévation.',
     image: 'real-garde-corps-1',
-    photos: ['real-garde-corps-1', 'real-garde-corps-2', 'real-garde-corps-3'],
+    photos: ['real-garde-corps-1', 'real-garde-corps-2', 'real-garde-corps-3', 'real-garde-corps-4'],
     location: null,
     span: 'tall',
   },
@@ -88,7 +89,7 @@ export const projects: Project[] = [
     description:
       'Approvisionnement et livraison des portes décoratives MOMO BOX directement sur chantier : nos camions transportent les blocs-portes du dépôt jusqu’à l’étage de pose, prêts au montage.',
     image: 'real-portes-1',
-    photos: ['real-portes-1', 'real-portes-2', 'real-portes-3'],
+    photos: ['real-portes-1', 'real-portes-2', 'real-portes-3', 'real-portes-4'],
     location: null,
     span: 'wide',
   },
@@ -101,9 +102,35 @@ export const projects: Project[] = [
     description:
       'Rénovation de façade : ossature aluminium, pose de panneaux composite et reprise des menuiseries sur l’ensemble du bâtiment, du soubassement aux derniers niveaux.',
     image: 'real-habillage-1',
-    photos: ['real-habillage-1', 'real-habillage-2'],
+    photos: ['real-habillage-1', 'real-habillage-2', 'real-facade-bardage-noir'],
     location: null,
     span: 'wide',
+  },
+  {
+    id: 'villa-piscine-paysage',
+    title: 'Villa avec piscine — menuiseries extérieures',
+    category: 'Façades',
+    type: 'Menuiseries et baies sur villa paysagère',
+    materials: ['Aluminium thermolaqué', 'Double vitrage', 'Aménagements extérieurs'],
+    description:
+      'Villa avec piscine et terrasses dallées : nos menuiseries prolongent les espaces de vie vers le jardin et le bassin, dans un paysage ouvert.',
+    image: 'real-piscine-villa',
+    photos: ['real-piscine-villa'],
+    location: null,
+    span: 'wide',
+  },
+  {
+    id: 'manutention-vitrage-chantier',
+    title: 'Manutention de vitrages grand format',
+    category: 'Vitrerie',
+    type: 'Déchargement et pose de vitrages',
+    materials: ['Verre feuilleté grand format', 'Garde-corps verre', 'Manutention sécurisée'],
+    description:
+      'Déchargement et manutention de vitrages grand format : quatre poseurs en gilets CRISTALU transfèrent les panneaux du camion à la zone de pose, en toute sécurité.',
+    image: 'real-manutention-verre-1',
+    photos: ['real-manutention-verre-1'],
+    location: null,
+    span: 'normal',
   },
   {
     id: 'flotte-intervention',
