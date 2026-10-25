@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cristalu — un site moderne, rapide et élégant." />
+  <title>Cristalu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#accueil" class="logo">Cristal<span>u</span></a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="nav-menu">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-small">Nous écrire</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Bienvenue sur Cristalu</p>
+        <h1>Une présence en ligne claire, <span class="accent">lumineuse</span> et facile à découvrir.</h1>
+        <p class="lead">
+          Cristalu vous accompagne avec des solutions simples, soignées et adaptées à vos besoins.
+          Découvrez nos services et prenez contact en quelques clics.
+        </p>
+        <div class="hero-actions">
+          <a href="#services" class="btn">Découvrir nos services</a>
+          <a href="#contact" class="btn btn-ghost">Nous contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Nos services</p>
+          <h2>Ce que nous faisons pour vous</h2>
+          <p>Trois engagements pour un travail de qualité, du premier échange à la livraison.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">✦</div>
+            <h3>Conseil personnalisé</h3>
+            <p>Nous écoutons vos besoins et proposons une approche sur mesure, sans complication inutile.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">◈</div>
+            <h3>Réalisation soignée</h3>
+            <p>Chaque détail compte. Nous livrons un résultat élégant, fiable et facile à utiliser.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">❖</div>
+            <h3>Accompagnement</h3>
+            <p>Une équipe disponible avant, pendant et après le projet pour répondre à vos questions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos" class="section section-alt">
+      <div class="container about">
+        <div>
+          <p class="eyebrow">À propos</p>
+          <h2>Un nom qui reflète notre exigence</h2>
+          <p>
+            Comme le cristal, nous visons la transparence et la précision. Cristalu est né de l'envie
+            de proposer un service clair, honnête et de qualité, accessible à tous.
+          </p>
+          <p>
+            Remplacez ce texte par l'histoire de votre entreprise, vos valeurs et votre savoir-faire.
+          </p>
+        </div>
+        <ul class="stats">
+          <li><strong>100%</strong><span>Engagement qualité</span></li>
+          <li><strong>24h</strong><span>Délai de réponse</span></li>
+          <li><strong>Sur mesure</strong><span>Chaque projet</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Parlons de votre projet</h2>
+          <p>Laissez-nous un message et nous vous répondrons dans les meilleurs délais.</p>
+          <ul class="contact-info">
+            <li>📍 Tanger, Maroc</li>
+            <li>✉️ contact@cristalu.example</li>
+            <li>📞 +212 6 00 00 00 00</li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="form" novalidate>
+          <div class="field">
+            <label for="name">Nom complet</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+            <small class="error" data-for="name"></small>
+          </div>
+          <div class="field">
+            <label for="email">Adresse e-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <small class="error" data-for="email"></small>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <small class="error" data-for="message"></small>
+          </div>
+          <button type="submit" class="btn">Envoyer le message</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Cristalu. Tous droits réservés.</p>
+      <a href="#accueil">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
