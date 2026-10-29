@@ -69,7 +69,6 @@ export function App() {
         <Process />
         <WhyCristalu />
         <Architecture />
-        <ServiceArea id="zone-2" index="11" />
         <Quote />
       </main>
       <Footer />
