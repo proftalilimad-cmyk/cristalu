@@ -15,7 +15,7 @@ const MAP_LEGEND = [
   { label: 'Zone à confirmer', tone: 'bg-alu-600' },
 ]
 
-export function ServiceArea() {
+export function ServiceArea({ id = 'zone', index = '10' }: { id?: string; index?: string }) {
   const [hovered, setHovered] = useState<string | null>(null)
   const [selected, setSelected] = useCity()
 
@@ -24,7 +24,7 @@ export function ServiceArea() {
   const hours = val(siteConfig.hours)
 
   return (
-    <section id="zone" className="relative overflow-hidden bg-alu-100 py-24 md:py-32">
+    <section id={id} className="relative overflow-hidden bg-alu-100 py-24 md:py-32">
       <div className="pointer-events-none absolute inset-0 bg-blueprint opacity-60" aria-hidden />
       <div className="pointer-events-none absolute -right-40 top-24 size-[32rem] rounded-full bg-accent-400/10 blur-[130px]" aria-hidden />
 
@@ -114,7 +114,7 @@ export function ServiceArea() {
           {/* Contenu */}
           <div>
             <Reveal y={16} duration={0.7}>
-              <Eyebrow index="10">Zone d’intervention</Eyebrow>
+              <Eyebrow index={index}>Zone d’intervention</Eyebrow>
             </Reveal>
             <RevealText
               text="Nous intervenons dans plusieurs villes du Maroc"

@@ -58,6 +58,7 @@ export function App() {
       <Header />
       <main id="contenu" className={booted ? '' : 'pointer-events-none'}>
         <Hero />
+        <ServiceArea id="zone" index="02" />
         <ValuesMarquee />
         <About />
         <AluminiumExperience />
@@ -68,7 +69,7 @@ export function App() {
         <Process />
         <WhyCristalu />
         <Architecture />
-        <ServiceArea />
+        <ServiceArea id="zone-2" index="11" />
         <Quote />
       </main>
       <Footer />
