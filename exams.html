@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الاختبارات | دوروسي</title>
+  <meta name="description" content="اختبارات وتقييمات تفاعلية مع تصحيح فوري لكل المواد والمستويات — منصة دوروسي." />
+  <meta name="theme-color" content="#0b3b3a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e7c66'/%3E%3Cpath d='M32 16l18 8-18 8-18-8 18-8z' fill='%23f2c14e'/%3E%3Cpath d='M19 30v10c0 5 6 8 13 8s13-3 13-8V30' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body class="site" data-page="exams">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">الرئيسية</a>
+          <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>الاختبارات</span>
+        </nav>
+        <h1>الاختبارات والتقييمات</h1>
+        <p>اختبر مستواك باختبارات قصيرة مع تصحيح فوري وتحليل للأخطاء — بدون تسجيل في البداية.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="filters">
+          <div class="chips" id="exam-chips"></div>
+          <span class="filters__count">تصحيح فوري · بدون حدود للمحاولات</span>
+        </div>
+        <div class="exams-grid" id="exams-grid"></div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>تريد متابعة نتائجك خطوة بخطوة؟</h2>
+            <p>أنشئ حسابك المجاني لتسجيل محاولاتك، ومشاهدة تحليل مفصّل لنقاط قوتك وضَعفك.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--gold" href="sign-up.html">إنشاء حساب مجاني</a>
+            <a class="btn btn--ghost" href="courses.html">تصفّح الدورات</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+    <span class="toast__msg">تم</span>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>المواد والدروس | دوروسي</title>
+  <meta name="description" content="تصفّح كل دورات منصة دوروسي حسب المادة والمستوى: رياضيات، فيزياء، علوم، لغات، فلسفة وتاريخ — من المتوسط إلى البكالوريا." />
+  <meta name="theme-color" content="#0b3b3a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e7c66'/%3E%3Cpath d='M32 16l18 8-18 8-18-8 18-8z' fill='%23f2c14e'/%3E%3Cpath d='M19 30v10c0 5 6 8 13 8s13-3 13-8V30' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body class="site" data-page="courses">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">الرئيسية</a>
+          <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>المواد والدروس</span>
+        </nav>
+        <h1>المواد والدروس</h1>
+        <p>كل الدورات مرتبة حسب المادة والمستوى. استخدم الفلاتر للوصول بسرعة إلى ما تحتاجه.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="filters">
+          <div class="chips" id="filter-chips"></div>
+          <label class="filter-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.6" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M16 16l4.4 4.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+            <input type="search" id="filter-search" placeholder="ابحث في الدورات…" aria-label="بحث" />
+          </label>
+          <select class="select" id="filter-level" aria-label="المستوى الدراسي"></select>
+          <span class="filters__count" id="courses-count"></span>
+        </div>
+
+        <div class="courses-grid" id="courses-grid"></div>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>لم تجد ما تبحث عنه؟</h2>
+            <p>أرسل لنا المادة والمستوى الذي تحتاجه، وسنضيفها إلى خطة المنصة القادمة.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--gold" href="#contact">اقترح مادة</a>
+            <a class="btn btn--ghost" href="exams.html">جرّب اختبارًا مجانيًا</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+    <span class="toast__msg">تم</span>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
