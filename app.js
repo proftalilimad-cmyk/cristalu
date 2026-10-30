@@ -54,6 +54,7 @@
     const host = $("#site-header");
     if (!host) return;
     const page = document.body.dataset.page || "";
+    const user = window.Auth ? window.Auth.getUser() : null;
     host.innerHTML = `
       <header class="site-header" id="site-header-bar">
         <div class="container header__inner">
@@ -68,12 +69,58 @@
           </nav>
 
           <div class="header__actions">
-            <a class="btn btn--ghost btn--sm hide-sm" href="sign-in.html">تسجيل الدخول</a>
-            <a class="btn btn--primary btn--sm" href="sign-up.html">ابدأ مجانًا</a>
+            ${user ? `
+              <div class="user-menu" id="user-menu">
+                <button class="user-menu__btn" id="user-btn" type="button" aria-expanded="false" aria-haspopup="true">
+                  <span class="avatar avatar--sm" style="--a1:#0e7490;--a2:#0d9488">${esc(user.initials)}</span>
+                  <span class="user-menu__name">${esc(user.name.split(" ")[0])}</span>
+                  ${ICONS.chevron}
+                </button>
+                <div class="user-menu__drop" id="user-drop" hidden>
+                  <div class="user-menu__head">
+                    <b>${esc(user.name)}</b>
+                    <small>${esc(user.email)}</small>
+                  </div>
+                  <a href="dashboard.html">لوحتي</a>
+                  <a href="courses.html">الدورات</a>
+                  <a href="exams.html">الاختبارات</a>
+                  <button type="button" id="logout-btn">تسجيل الخروج</button>
+                </div>
+              </div>`
+            : `<a class="btn btn--ghost btn--sm hide-sm" href="sign-in.html">تسجيل الدخول</a>
+               <a class="btn btn--primary btn--sm" href="sign-up.html">ابدأ مجانًا</a>`}
             <button class="burger" id="burger" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="main-nav">${ICONS.menu}</button>
           </div>
         </div>
       </header>`;
+
+    const userBtn = $("#user-btn");
+    const userMenu = $("#user-menu");
+    const userDrop = $("#user-drop");
+    if (userBtn && userDrop && userMenu) {
+      userBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const open = userDrop.hidden;
+        userDrop.hidden = !open;
+        userMenu.classList.toggle("is-open", open);
+        userBtn.setAttribute("aria-expanded", String(open));
+      });
+      document.addEventListener("click", () => {
+        if (userDrop.hidden) return;
+        userDrop.hidden = true;
+        userMenu.classList.remove("is-open");
+        userBtn.setAttribute("aria-expanded", "false");
+      });
+    }
+
+    const logout = $("#logout-btn");
+    if (logout) {
+      logout.addEventListener("click", () => {
+        if (window.Auth) window.Auth.signOut();
+        toast("تم تسجيل الخروج. إلى اللقاء!");
+        setTimeout(() => { location.href = "index.html"; }, 700);
+      });
+    }
 
     const burger = $("#burger");
     const bar = $("#site-header-bar");
@@ -679,12 +726,25 @@
     dashboard() {
       const host = $("#dash-root");
       if (!host) return;
-      const st = D.student;
+      const user = window.Auth ? window.Auth.getUser() : null;
+      const st = {
+        ...D.student,
+        name: user ? user.name.split(" ")[0] : "زائر",
+        fullName: user ? user.name : "زائر",
+        initials: user ? user.initials : "ز",
+        level: user ? user.level : "لم تسجّل الدخول بعد"
+      };
       const active = D.courses.filter((c) => c.progress > 0);
       const overall = Math.round(active.reduce((a, c) => a + c.progress, 0) / (active.length || 1));
       const goalPct = Math.round((st.weeklyDone / st.weeklyGoal) * 100);
 
       host.innerHTML = `
+        ${user ? "" : `
+        <div class="notice">
+          <span>أنت تتصفّح لوحة تجريبية كزائر. لتجربة الدخول الكاملة استعمل الحساب التجريبي:</span>
+          <code dir="ltr">demo@douroussi.dz / demo1234</code>
+          <a href="sign-in.html">سجّل الدخول الآن</a>
+        </div>`}
         <div class="dash-top">
           <div class="dash-hello">
             <span class="eyebrow">لوحة المتعلّم</span>
@@ -785,6 +845,19 @@
       }, { threshold: 0.12 })
     : null;
   if (io) $$(".reveal").forEach((el) => io.observe(el));
+
+  // quick demo login (landing page)
+  $$("[data-quick-demo]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!window.Auth) return;
+      const res = window.Auth.signIn(window.Auth.DEMO.email, window.Auth.DEMO.password);
+      if (!res.ok) return;
+      btn.disabled = true;
+      btn.textContent = "جارٍ الدخول…";
+      toast("مرحبًا " + res.user.name.split(" ")[0] + "! جارٍ فتح لوحتك…");
+      setTimeout(() => { location.href = "dashboard.html"; }, 750);
+    });
+  });
 
   // smooth in-page links
   $$('a[href^="#"]').forEach((a) => {

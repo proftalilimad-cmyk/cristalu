@@ -137,36 +137,99 @@
     return ok;
   }
 
+  function setLoading(isLoading, doneText) {
+    if (!submitBtn) return;
+    submitBtn.disabled = isLoading;
+    submitBtn.classList.toggle("is-loading", isLoading);
+    if (doneText) {
+      submitBtn.classList.add("is-done");
+      if (labelEl) labelEl.textContent = doneText;
+    } else if (isLoading) {
+      submitBtn.classList.remove("is-done");
+      if (labelEl) labelEl.textContent = "جارٍ المعالجة…";
+    }
+  }
+
+  function resetButton() {
+    if (!submitBtn) return;
+    submitBtn.disabled = false;
+    submitBtn.classList.remove("is-loading", "is-done");
+    if (labelEl) labelEl.textContent = defaultLabel;
+  }
+
+  function fail(fieldName, message) {
+    resetButton();
+    const input = fieldName ? form.querySelector("#" + fieldName) : null;
+    const field = input ? input.closest(".field") : null;
+    if (field) showError(field, message);
+    toast(message);
+  }
+
+  function succeed(user) {
+    setLoading(false, "تم بنجاح ✓");
+    toast(mode === "signup"
+      ? `مرحبًا ${user.name.split(" ")[0]}! تم إنشاء حسابك.`
+      : `مرحبًا ${user.name.split(" ")[0]}! جارٍ فتح لوحتك…`);
+
+    setTimeout(() => {
+      location.href = "dashboard.html";
+    }, 850);
+  }
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!validate()) return;
 
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.classList.add("is-loading");
-      if (labelEl) labelEl.textContent = "جارٍ المعالجة…";
-    }
+    const emailEl = form.querySelector("#email");
+    const passEl = form.querySelector("#password");
+    const nameEl = form.querySelector("#fullname");
 
-    // نسخة تجريبية: لا يوجد اتصال بخادم، نحاكي طلبًا ناجحًا
+    setLoading(true);
+
+    // محاكاة طلب شبكة — استبدلها بـ fetch('/api/auth/...') في الإنتاج
     setTimeout(() => {
-      if (submitBtn) {
-        submitBtn.classList.remove("is-loading");
-        submitBtn.classList.add("is-done");
-        if (labelEl) labelEl.textContent = "تم بنجاح ✓";
-      }
-      toast(mode === "signup"
-        ? "تم إنشاء الحساب بنجاح — نسخة تجريبية"
-        : "تم تسجيل الدخول بنجاح — نسخة تجريبية");
+      const res = mode === "signup"
+        ? window.Auth.signUp({
+            name: nameEl ? nameEl.value : "متعلّم جديد",
+            email: emailEl.value,
+            password: passEl.value
+          })
+        : window.Auth.signIn(emailEl.value, passEl.value);
 
-      setTimeout(() => {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.classList.remove("is-done");
-          if (labelEl) labelEl.textContent = defaultLabel;
-        }
-      }, 2200);
-    }, 1100);
+      if (!res.ok) {
+        fail(res.field, res.message);
+        return;
+      }
+      succeed(res.user);
+    }, 750);
   });
+
+  /* ---------- quick demo login ---------- */
+  const fillDemo = document.querySelector("[data-demo-login]");
+  if (fillDemo) {
+    fillDemo.addEventListener("click", () => {
+      const emailEl = form.querySelector("#email");
+      const passEl = form.querySelector("#password");
+      if (!emailEl || !passEl) return;
+      emailEl.value = window.Auth.DEMO.email;
+      passEl.value = window.Auth.DEMO.password;
+      [emailEl, passEl].forEach((el) => {
+        const field = el.closest(".field");
+        if (field) clearError(field);
+      });
+      if (typeof form.requestSubmit === "function") form.requestSubmit();
+      else form.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+    });
+  }
+
+  /* ---------- already signed in? ---------- */
+  const already = document.querySelector("[data-already]");
+  const current = window.Auth.getUser();
+  if (already && current) {
+    already.hidden = false;
+    const alreadyName = already.querySelector("[data-already-name]");
+    if (alreadyName) alreadyName.textContent = current.name;
+  }
 
   /* ---------- current year ---------- */
   const year = new Date().getFullYear();

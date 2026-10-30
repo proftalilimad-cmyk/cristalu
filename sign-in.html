@@ -106,6 +106,19 @@
             <p class="card__sub">سجّل الدخول لمتابعة رحلتك التعليمية.</p>
           </div>
 
+
+          <div class="already" data-already hidden>
+            أنت مسجّل الدخول حاليًا كـ <b data-already-name></b> — <a href="dashboard.html">الذهاب إلى لوحتي</a>
+          </div>
+
+          <div class="demo-box">
+            <div class="demo-box__text">
+              <strong>حساب تجريبي جاهز</strong>
+              <span dir="ltr">demo@douroussi.dz · demo1234</span>
+            </div>
+            <button class="btn--demo" type="button" data-demo-login>دخول سريع تجريبي</button>
+          </div>
+
           <form class="form" id="login-form" data-auth="login" novalidate>
             <div class="field">
               <label for="email">البريد الإلكتروني</label>
@@ -190,6 +203,7 @@
     <span class="toast__msg">تم تسجيل الدخول بنجاح — نسخة تجريبية</span>
   </div>
 
+  <script src="session.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
